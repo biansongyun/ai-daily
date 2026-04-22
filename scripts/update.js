@@ -51,7 +51,7 @@ ${text}`;
     throw new Error('LLM API error ' + res.status + ': ' + rawText.substring(0, 200));
   }
 
-  const data = JSON.parse(rawText);
+   const data = JSON.parse(rawText);
   let content = data.choices[0].message.content;
   console.log('📝 Raw LLM content:', content.substring(0, 500));
 
