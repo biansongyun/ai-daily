@@ -1,0 +1,2462 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "7gjiM",
+      "x": 880,
+      "y": 0,
+      "name": "AI Daily Dashboard",
+      "width": 1440,
+      "fill": "#0D0D14",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "MJxEm",
+          "name": "Navbar",
+          "width": "fill_container",
+          "height": 72,
+          "fill": "#0D0D14",
+          "stroke": {
+            "align": "outside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#1E1E2E"
+          },
+          "padding": [
+            0,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gaZeC",
+              "name": "navLeft",
+              "height": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "y2Gz7",
+                  "name": "logoBox",
+                  "width": 32,
+                  "height": 32,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#A855F7",
+                        "position": 0
+                      },
+                      {
+                        "color": "#06B6D4",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U3Do7",
+                      "layoutPosition": "absolute",
+                      "x": 6,
+                      "y": 8,
+                      "name": "logoIcon",
+                      "fill": "#FFFFFF",
+                      "content": "AI",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SATJV",
+                  "name": "brandTitle",
+                  "fill": "#F4F4F5",
+                  "content": "AI Daily",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "PibF0",
+                  "name": "brandSub",
+                  "fill": "#71717A",
+                  "content": "每日资讯",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 12
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mwTO5",
+              "name": "navSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "z6an4",
+              "name": "navDate",
+              "fill": "#71717A",
+              "content": "2026.04.20",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "0uibW",
+              "name": "navDivider",
+              "width": 1,
+              "height": 20,
+              "fill": "#2A2A3E"
+            },
+            {
+              "type": "frame",
+              "id": "PjX8c",
+              "name": "langToggle",
+              "height": 34,
+              "cornerRadius": 20,
+              "stroke": {
+                "align": "outside",
+                "thickness": 1,
+                "fill": "#2A2A3E"
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PHPkT",
+                  "name": "langZh",
+                  "width": 56,
+                  "height": 34,
+                  "fill": "#A855F7",
+                  "cornerRadius": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VoUu9",
+                      "name": "langZhTxt",
+                      "fill": "#FFFFFF",
+                      "content": "中文",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qsSi2",
+                  "name": "langEn",
+                  "width": 56,
+                  "height": 34,
+                  "fill": "#00000000",
+                  "cornerRadius": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8s9Vi",
+                      "name": "langEnTxt",
+                      "fill": "#71717A",
+                      "content": "EN",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HBVab",
+          "name": "Stats Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            120,
+            24,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "bDsHf",
+              "name": "sectionLabel",
+              "fill": "#A855F7",
+              "content": "今日概览 · TODAY'S OVERVIEW",
+              "fontFamily": "Geist Mono",
+              "fontSize": 11,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            },
+            {
+              "type": "frame",
+              "id": "1pAwy",
+              "name": "statsRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "g7AbN",
+                  "name": "stat1",
+                  "width": "fill_container",
+                  "height": 96,
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    24
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7y0to",
+                      "name": "stat1Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#1A0A2E",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "4wvCT",
+                          "name": "stat1IconTxt",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "newspaper",
+                          "iconFontFamily": "lucide",
+                          "fill": "#A855F7"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UMdjG",
+                      "name": "stat1Info",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DmwsG",
+                          "name": "stat1Num",
+                          "fill": "#F4F4F5",
+                          "content": "47",
+                          "fontFamily": "Inter",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6rpdI",
+                          "name": "stat1Label",
+                          "fill": "#71717A",
+                          "content": "今日新闻 / News Today",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "All7H",
+                  "name": "stat2",
+                  "width": "fill_container",
+                  "height": 96,
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    24
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XO8wA",
+                      "name": "stat2Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#0A1A2E",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "FOtOQ",
+                          "name": "stat2IconTxt",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "database",
+                          "iconFontFamily": "lucide",
+                          "fill": "#06B6D4"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rdCnZ",
+                      "name": "stat2Info",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "v0Z4t",
+                          "name": "stat2Num",
+                          "fill": "#F4F4F5",
+                          "content": "12",
+                          "fontFamily": "Inter",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cSMir",
+                          "name": "stat2Label",
+                          "fill": "#71717A",
+                          "content": "数据来源 / Sources",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k6FvY",
+                  "name": "stat3",
+                  "width": "fill_container",
+                  "height": 96,
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    24
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qvw9z",
+                      "name": "stat3Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#1A0A18",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "DlmNR",
+                          "name": "stat3IconTxt",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "trending-up",
+                          "iconFontFamily": "lucide",
+                          "fill": "#EC4899"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TkdBY",
+                      "name": "stat3Info",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HYMO7",
+                          "name": "stat3Num",
+                          "fill": "#F4F4F5",
+                          "content": "GPT-5",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SbtGD",
+                          "name": "stat3Label",
+                          "fill": "#71717A",
+                          "content": "热门话题 / Trending",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gaTti",
+          "name": "Main Content",
+          "width": "fill_container",
+          "gap": 24,
+          "padding": [
+            0,
+            120,
+            32,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "SC2Qu",
+              "name": "News Feed",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rAV02",
+                  "name": "feedHeader",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D2jTk",
+                      "name": "feedTitle",
+                      "fill": "#A1A1AA",
+                      "content": "最新资讯 · LATEST NEWS",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "y0YzF",
+                      "name": "feedSpacer",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6dm0m",
+                      "name": "filterRow",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "t9Kpa",
+                          "name": "filterAll",
+                          "height": 26,
+                          "fill": "#A855F7",
+                          "cornerRadius": 20,
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Wi7M7",
+                              "name": "filterAllTxt",
+                              "fill": "#FFFFFF",
+                              "content": "全部",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RtLEz",
+                          "name": "filterLLM",
+                          "height": 26,
+                          "fill": "#1A1A2A",
+                          "cornerRadius": 20,
+                          "stroke": {
+                            "align": "outside",
+                            "thickness": 1,
+                            "fill": "#2A2A3E"
+                          },
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W9YeF",
+                              "name": "filterLLMTxt",
+                              "fill": "#71717A",
+                              "content": "LLM",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FqNze",
+                          "name": "filterResearch",
+                          "height": 26,
+                          "fill": "#1A1A2A",
+                          "cornerRadius": 20,
+                          "stroke": {
+                            "align": "outside",
+                            "thickness": 1,
+                            "fill": "#2A2A3E"
+                          },
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "fMbt4",
+                              "name": "filterResearchTxt",
+                              "fill": "#71717A",
+                              "content": "研究",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SiEi7",
+                          "name": "filterIndustry",
+                          "height": 26,
+                          "fill": "#1A1A2A",
+                          "cornerRadius": 20,
+                          "stroke": {
+                            "align": "outside",
+                            "thickness": 1,
+                            "fill": "#2A2A3E"
+                          },
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "INDzD",
+                              "name": "filterIndustryTxt",
+                              "fill": "#71717A",
+                              "content": "行业",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1zxFv",
+                  "name": "NewsCard1",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8MV3s",
+                      "name": "c1top",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rnlsc",
+                          "name": "c1tag",
+                          "fill": "#1F0A3A",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tNwXd",
+                              "name": "c1tagTxt",
+                              "fill": "#A855F7",
+                              "content": "LLM",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "vPq1o",
+                          "name": "c1src",
+                          "fill": "#71717A",
+                          "content": "OpenAI Blog",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zODaf",
+                          "name": "c1space",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "UuCEL",
+                          "name": "c1time",
+                          "fill": "#4A4A5A",
+                          "content": "2小时前",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "8fU7K",
+                      "name": "c1title",
+                      "fill": "#F4F4F5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "OpenAI 发布 GPT-5 预览版，多模态推理能力大幅提升",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "974rw",
+                      "name": "c1desc",
+                      "fill": "#71717A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "OpenAI officially released GPT-5 Preview, demonstrating significant improvements in multimodal reasoning and code generation. The new model surpasses GPT-4o on major benchmarks.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EtziN",
+                      "name": "c1foot",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mSi1e",
+                          "name": "c1readMore",
+                          "fill": "#A855F7",
+                          "content": "阅读原文 →",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cPCtb",
+                          "name": "c1footSpace",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "YrxCf",
+                          "name": "c1srcLink",
+                          "fill": "#3A3A4A",
+                          "content": "来源: openai.com/blog",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K6hfQ",
+                  "name": "NewsCard2",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "s5bO6",
+                      "name": "c2top",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ssEHj",
+                          "name": "c2tag",
+                          "fill": "#0A1A2A",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8TJeh",
+                              "name": "c2tagTxt",
+                              "fill": "#06B6D4",
+                              "content": "研究",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Lu3L8",
+                          "name": "c2src",
+                          "fill": "#71717A",
+                          "content": "Nature / DeepMind",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bCj58",
+                          "name": "c2space",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "jRtBG",
+                          "name": "c2time",
+                          "fill": "#4A4A5A",
+                          "content": "3小时前",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "DZxKH",
+                      "name": "c2title",
+                      "fill": "#F4F4F5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Google DeepMind AlphaFold 3 突破蛋白质-DNA 相互作用预测",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lTybp",
+                      "name": "c2desc",
+                      "fill": "#71717A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DeepMind's AlphaFold 3 now predicts not only protein structures but also protein-DNA and protein-ligand interactions, opening new possibilities for drug discovery and synthetic biology.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qbpGO",
+                      "name": "c2foot",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oMN2l",
+                          "name": "c2readMore",
+                          "fill": "#06B6D4",
+                          "content": "阅读原文 →",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ajCX1",
+                          "name": "c2footSpace",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "CFiDd",
+                          "name": "c2srcLink",
+                          "fill": "#3A3A4A",
+                          "content": "来源: nature.com / deepmind.google",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5iEVf",
+                  "name": "NewsCard3",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jhw82",
+                      "name": "c3top",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ZT4Su",
+                          "name": "c3tag",
+                          "fill": "#1A0A10",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Px0e7",
+                              "name": "c3tagTxt",
+                              "fill": "#EC4899",
+                              "content": "安全",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "XQMlT",
+                          "name": "c3src",
+                          "fill": "#71717A",
+                          "content": "Anthropic Blog",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qAnVO",
+                          "name": "c3space",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "hU0Aw",
+                          "name": "c3time",
+                          "fill": "#4A4A5A",
+                          "content": "5小时前",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "o1kGr",
+                      "name": "c3title",
+                      "fill": "#F4F4F5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Anthropic 发布 Claude 4 系统卡：全面披露模型安全评估报告",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7DVY1",
+                      "name": "c3desc",
+                      "fill": "#71717A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Anthropic published the system card for Claude 4, detailing safety evaluations including CBRN risk, autonomy risk, and societal impact assessments conducted before public deployment.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XdDfh",
+                      "name": "c3foot",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "u6plg",
+                          "name": "c3readMore",
+                          "fill": "#EC4899",
+                          "content": "阅读原文 →",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Llxtg",
+                          "name": "c3footSpace",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "PCHNB",
+                          "name": "c3srcLink",
+                          "fill": "#3A3A4A",
+                          "content": "来源: anthropic.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MmGRd",
+                  "name": "NewsCard4",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lYz6q",
+                      "name": "c4top",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "vARYV",
+                          "name": "c4tag",
+                          "fill": "#0A1A10",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GIryH",
+                              "name": "c4tagTxt",
+                              "fill": "#22C55E",
+                              "content": "开源",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "r8jyT",
+                          "name": "c4src",
+                          "fill": "#71717A",
+                          "content": "Hugging Face / Meta AI",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "0GkOb",
+                          "name": "c4space",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "SFWxS",
+                          "name": "c4time",
+                          "fill": "#4A4A5A",
+                          "content": "6小时前",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "neKz4",
+                      "name": "c4title",
+                      "fill": "#F4F4F5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Meta 开源 Llama 4 多模态系列，Scout 与 Maverick 双版本上线",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n497P",
+                      "name": "c4desc",
+                      "fill": "#71717A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Meta released Llama 4 Scout (17B active params) and Maverick (17B MoE), both supporting multimodal input. Models are available on Hugging Face under a commercial-friendly license.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w2Kkc",
+                      "name": "c4foot",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PpqbF",
+                          "name": "c4readMore",
+                          "fill": "#22C55E",
+                          "content": "阅读原文 →",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ghAk1",
+                          "name": "c4footSpace",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "jAvWj",
+                          "name": "c4srcLink",
+                          "fill": "#3A3A4A",
+                          "content": "来源: huggingface.co / ai.meta.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rWaka",
+                  "name": "NewsCard5",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uZC2n",
+                      "name": "c5top",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wfqVR",
+                          "name": "c5tag",
+                          "fill": "#1A1510",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Luq6Y",
+                              "name": "c5tagTxt",
+                              "fill": "#EAB308",
+                              "content": "行业",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "FNj7M",
+                          "name": "c5src",
+                          "fill": "#71717A",
+                          "content": "TechCrunch",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eh2XH",
+                          "name": "c5space",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "gaxAk",
+                          "name": "c5time",
+                          "fill": "#4A4A5A",
+                          "content": "8小时前",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Xebo0",
+                      "name": "c5title",
+                      "fill": "#F4F4F5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "微软 Copilot 全线集成 GPT-5，企业版用户率先获得访问权限",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yRNNl",
+                      "name": "c5desc",
+                      "fill": "#71717A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Microsoft announced that Copilot for Microsoft 365 will integrate GPT-5, rolling out first to enterprise customers. The upgrade promises improved accuracy in document summarization and code assistance.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "N9k9t",
+                      "name": "c5foot",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5qMqM",
+                          "name": "c5readMore",
+                          "fill": "#EAB308",
+                          "content": "阅读原文 →",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fHtui",
+                          "name": "c5footSpace",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "48FEf",
+                          "name": "c5srcLink",
+                          "fill": "#3A3A4A",
+                          "content": "来源: techcrunch.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jk8bX",
+              "name": "Sidebar",
+              "width": 300,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qii5d",
+                  "name": "trendBox",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0RkH6",
+                      "name": "trendTitle",
+                      "fill": "#A1A1AA",
+                      "content": "热门话题 · TRENDING",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YgVd2",
+                      "name": "trend1",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6a8Mv",
+                          "name": "trend1Rank",
+                          "fill": "#A855F7",
+                          "content": "01",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JBozR",
+                          "name": "trend1Text",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "GPT-5 发布",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OZBY2",
+                          "name": "trend1Count",
+                          "fill": "#4A4A5A",
+                          "content": "1.2k",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "50qG0",
+                      "name": "trend2",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ep83n",
+                          "name": "trend2Rank",
+                          "fill": "#06B6D4",
+                          "content": "02",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dbUNl",
+                          "name": "trend2Text",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "AlphaFold 3",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PG3kQ",
+                          "name": "trend2Count",
+                          "fill": "#4A4A5A",
+                          "content": "874",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yBt7c",
+                      "name": "trend3",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TTlVw",
+                          "name": "trend3Rank",
+                          "fill": "#EC4899",
+                          "content": "03",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "90bOP",
+                          "name": "trend3Text",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Claude 安全评估",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ACEHn",
+                          "name": "trend3Count",
+                          "fill": "#4A4A5A",
+                          "content": "621",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IIeST",
+                      "name": "trend4",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ee58j",
+                          "name": "trend4Rank",
+                          "fill": "#EAB308",
+                          "content": "04",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uhQ5X",
+                          "name": "trend4Text",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Llama 4 开源",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xRToD",
+                          "name": "trend4Count",
+                          "fill": "#4A4A5A",
+                          "content": "509",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MBIDf",
+                      "name": "trend5",
+                      "width": "fill_container",
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AABc6",
+                          "name": "trend5Rank",
+                          "fill": "#22C55E",
+                          "content": "05",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uFhSK",
+                          "name": "trend5Text",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "AI 芯片市场",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yzBdi",
+                          "name": "trend5Count",
+                          "fill": "#4A4A5A",
+                          "content": "388",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4wnDy",
+                  "name": "sourceBox",
+                  "width": "fill_container",
+                  "fill": "#13131F",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eUArc",
+                      "name": "sourceTitle",
+                      "fill": "#A1A1AA",
+                      "content": "数据来源 · DATA SOURCES",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 11,
+                      "fontWeight": "600",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "sji2d",
+                      "name": "srcNote",
+                      "fill": "#4A4A5A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "以下平台的公开内容经过聚合与摘要处理",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EqDZe",
+                      "name": "srcRow1",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "fnfpc",
+                          "name": "srcDot1",
+                          "fill": "#A855F7",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "NaT3x",
+                          "name": "srcName1",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "OpenAI Blog",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uWYXI",
+                          "name": "srcUrl1",
+                          "fill": "#3A3A4A",
+                          "content": "openai.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zn4jM",
+                      "name": "srcRow2",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "vvgcD",
+                          "name": "srcDot2",
+                          "fill": "#06B6D4",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "1mTy8",
+                          "name": "srcName2",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Google DeepMind",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xMAiP",
+                          "name": "srcUrl2",
+                          "fill": "#3A3A4A",
+                          "content": "deepmind.google",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zRxT8",
+                      "name": "srcRow3",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "VyAPd",
+                          "name": "srcDot3",
+                          "fill": "#EC4899",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "k6Oms",
+                          "name": "srcName3",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Anthropic Blog",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tB8zG",
+                          "name": "srcUrl3",
+                          "fill": "#3A3A4A",
+                          "content": "anthropic.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "08UgS",
+                      "name": "srcRow4",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "v1peh",
+                          "name": "srcDot4",
+                          "fill": "#22C55E",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "H4m0I",
+                          "name": "srcName4",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Hugging Face",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "whnAQ",
+                          "name": "srcUrl4",
+                          "fill": "#3A3A4A",
+                          "content": "huggingface.co",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6R9Hn",
+                      "name": "srcRow5",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "1PgpM",
+                          "name": "srcDot5",
+                          "fill": "#EAB308",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "kbU5E",
+                          "name": "srcName5",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "TechCrunch AI",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4N2sM",
+                          "name": "srcUrl5",
+                          "fill": "#3A3A4A",
+                          "content": "techcrunch.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MX6Ou",
+                      "name": "srcRow6",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "T892n",
+                          "name": "srcDot6",
+                          "fill": "#A855F7",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "Fe5Ol",
+                          "name": "srcName6",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "MIT Tech Review",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HJJrJ",
+                          "name": "srcUrl6",
+                          "fill": "#3A3A4A",
+                          "content": "technologyreview.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QXHdE",
+                      "name": "srcRow7",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "SfdSy",
+                          "name": "srcDot7",
+                          "fill": "#06B6D4",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "2foK7",
+                          "name": "srcName7",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "VentureBeat AI",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LjF5m",
+                          "name": "srcUrl7",
+                          "fill": "#3A3A4A",
+                          "content": "venturebeat.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s2wK0",
+                      "name": "srcRow8",
+                      "width": "fill_container",
+                      "stroke": {
+                        "align": "outside",
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#1A1A28"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "iUovO",
+                          "name": "srcDot8",
+                          "fill": "#EC4899",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "0fZnN",
+                          "name": "srcName8",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "ArXiv (cs.AI / cs.LG)",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4N3S9",
+                          "name": "srcUrl8",
+                          "fill": "#3A3A4A",
+                          "content": "arxiv.org",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I0jNw",
+                      "name": "srcRow9",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "A1I1f",
+                          "name": "srcDot9",
+                          "fill": "#22C55E",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "ifYEd",
+                          "name": "srcName9",
+                          "fill": "#D4D4D8",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "The Verge AI",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7f6uD",
+                          "name": "srcUrl9",
+                          "fill": "#3A3A4A",
+                          "content": "theverge.com",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "utQMZ",
+                      "name": "updateNote",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "padding": [
+                        10,
+                        0,
+                        0,
+                        0
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "LTNwx",
+                          "name": "updateIcon",
+                          "width": 12,
+                          "height": 12,
+                          "iconFontName": "refresh-cw",
+                          "iconFontFamily": "lucide",
+                          "fill": "#3A3A4A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "v6Jv3",
+                          "name": "updateTxt",
+                          "fill": "#3A3A4A",
+                          "content": "每小时自动抓取更新 · Auto-refresh hourly",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "di5jK",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#080810",
+          "stroke": {
+            "align": "outside",
+            "thickness": {
+              "top": 1
+            },
+            "fill": "#1A1A28"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            20,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Ye8bb",
+              "name": "footerTop",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WZNCz",
+                  "name": "footerLogo",
+                  "fill": "#A855F7",
+                  "content": "AI Daily",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Rt7Mi",
+                  "name": "footerSlash",
+                  "fill": "#3A3A4A",
+                  "content": "·",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "lhjcZ",
+                  "name": "footerDesc",
+                  "fill": "#4A4A5A",
+                  "content": "每日 AI 资讯聚合平台 · Aggregated AI News Platform",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "cAoLZ",
+                  "name": "footerSpacer",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "GlXEH",
+                  "name": "footerDisclaimer",
+                  "fill": "#3A3A4A",
+                  "content": "内容仅供参考，版权归原作者所有",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UP9Cn",
+              "name": "footerSources",
+              "width": "fill_container",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8LUP1",
+                  "name": "footerSourcesLabel",
+                  "fill": "#4A4A5A",
+                  "content": "数据来源:",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QtVX9",
+                  "name": "for1",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z8R9D",
+                      "name": "for1Txt",
+                      "fill": "#71717A",
+                      "content": "openai.com",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UZEdL",
+                  "name": "for2",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gyjUT",
+                      "name": "for2Txt",
+                      "fill": "#71717A",
+                      "content": "anthropic.com",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pQs1u",
+                  "name": "for3",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KZZd9",
+                      "name": "for3Txt",
+                      "fill": "#71717A",
+                      "content": "arxiv.org",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EODFk",
+                  "name": "for4",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rX4rQ",
+                      "name": "for4Txt",
+                      "fill": "#71717A",
+                      "content": "huggingface.co",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JzYtC",
+                  "name": "for5",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XZgZ2",
+                      "name": "for5Txt",
+                      "fill": "#71717A",
+                      "content": "techcrunch.com",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zHHGY",
+                  "name": "for6",
+                  "fill": "#13131F",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "outside",
+                    "thickness": 1,
+                    "fill": "#1E1E2E"
+                  },
+                  "padding": [
+                    3,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EtVj3",
+                      "name": "for6Txt",
+                      "fill": "#A855F7",
+                      "content": "+ 7 more",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Daily — 每日 AI 资讯聚合平台 | Daily AI News Aggregator" />
+  <title>AI Daily · 每日 AI 资讯</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Variables ─────────────────────────────────── */
+    :root {
+      --bg-page:    #0D0D14;
+      --bg-card:    #13131F;
+      --bg-card-h:  #16162A;
+      --bg-footer:  #080810;
+      --border:     #1E1E2E;
+      --border-sub: #1A1A28;
+      --tx-1:  #F4F4F5;
+      --tx-2:  #A1A1AA;
+      --tx-3:  #71717A;
+      --tx-4:  #4A4A5A;
+      --tx-5:  #3A3A4A;
+      --pu:  #A855F7;  --pu-bg: #1F0A3A;
+      --cy:  #06B6D4;  --cy-bg: #0A1A2A;
+      --pk:  #EC4899;  --pk-bg: #1A0A10;
+      --gr:  #22C55E;  --gr-bg: #0A1A10;
+      --yw:  #EAB308;  --yw-bg: #1A1510;
+    }
+
+    /* ─── Reset ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-page);
+      color: var(--tx-1);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    a { text-decoration: none; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-page); }
+    ::-webkit-scrollbar-thumb { background: #2A2A3E; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3A3A5E; }
+
+    /* ─── Navbar ─────────────────────────────────────── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,20,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      height: 72px;
+      display: flex; align-items: center;
+      padding: 0 120px; gap: 0;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-logo {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .nav-title  { font-size: 20px; font-weight: 700; color: var(--tx-1); }
+    .nav-sub    { font-size: 12px; color: var(--tx-3); font-family: 'JetBrains Mono', monospace; }
+    .nav-spacer { flex: 1; }
+    .nav-date   { font-size: 12px; color: var(--tx-3); font-family: 'JetBrains Mono', monospace; margin-right: 16px; }
+    .nav-div    { width: 1px; height: 20px; background: #2A2A3E; margin-right: 16px; }
+
+    .lang-toggle { display: flex; border: 1px solid #2A2A3E; border-radius: 20px; overflow: hidden; }
+    .lang-btn {
+      width: 56px; height: 34px;
+      border: none; background: transparent; cursor: pointer;
+      font-size: 12px; font-weight: 400; color: var(--tx-3);
+      font-family: 'Inter', sans-serif;
+      transition: background .2s, color .2s;
+    }
+    .lang-btn.active { background: var(--pu); color: #fff; font-weight: 600; border-radius: 20px; }
+
+    /* ─── Stats ──────────────────────────────────────── */
+    .stats-section { padding: 32px 120px 24px; }
+    .section-label {
+      font-size: 11px; font-weight: 500; color: var(--pu);
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 2px; margin-bottom: 16px;
+    }
+    .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .stat-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      height: 96px; display: flex; align-items: center; padding: 0 24px; gap: 16px;
+    }
+    .stat-icon {
+      width: 44px; height: 44px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .stat-icon.pu-i { background: #1A0A2E; color: var(--pu); }
+    .stat-icon.cy-i { background: #0A1A2E; color: var(--cy); }
+    .stat-icon.pk-i { background: #1A0A18; color: var(--pk); }
+    .stat-icon svg  { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .stat-info  { display: flex; flex-direction: column; gap: 4px; }
+    .stat-num   { font-size: 32px; font-weight: 700; line-height: 1; }
+    .stat-num.sm{ font-size: 22px; }
+    .stat-label { font-size: 11px; color: var(--tx-3); }
+
+    /* ─── Main Layout ────────────────────────────────── */
+    .main { display: flex; gap: 24px; padding: 0 120px 32px; align-items: flex-start; }
+
+    /* ─── News Feed ──────────────────────────────────── */
+    .feed { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+    .feed-hdr { display: flex; align-items: center; gap: 10px; min-height: 40px; flex-wrap: wrap; row-gap: 8px; }
+    .feed-title { font-size: 11px; font-weight: 600; color: var(--tx-2); font-family: 'JetBrains Mono', monospace; letter-spacing: 2px; white-space: nowrap; }
+    .feed-spacer { flex: 1; min-width: 8px; }
+    .filter-row  { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn {
+      height: 26px; padding: 0 12px; border-radius: 20px;
+      border: 1px solid #2A2A3E; background: #1A1A2A;
+      color: var(--tx-3); font-size: 11px; font-family: 'Inter', sans-serif;
+      cursor: pointer; transition: all .2s; white-space: nowrap;
+    }
+    .filter-btn.active  { background: var(--pu); border-color: var(--pu); color: #fff; font-weight: 600; }
+    .filter-btn:hover:not(.active) { border-color: var(--pu); color: var(--tx-1); }
+
+    .search-wrap { position: relative; }
+    .search-icon { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; stroke: var(--tx-4); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+    .search-input {
+      background: #1A1A2A; border: 1px solid #2A2A3E; border-radius: 6px;
+      height: 26px; padding: 0 10px 0 26px;
+      font-size: 11px; color: var(--tx-1); width: 160px;
+      outline: none; font-family: 'Inter', sans-serif;
+      transition: border-color .2s, width .2s;
+    }
+    .search-input::placeholder { color: var(--tx-4); }
+    .search-input:focus { border-color: var(--pu); width: 200px; }
+
+    /* ─── News Card ──────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .news-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 20px; display: flex; flex-direction: column; gap: 10px;
+      transition: border-color .2s, box-shadow .2s, transform .15s;
+      animation: fadeUp .3s ease both;
+    }
+    .news-card:hover { border-color: #2A2A4E; transform: translateY(-1px); box-shadow: 0 4px 24px rgba(168,85,247,.06); }
+
+    .card-top   { display: flex; align-items: center; gap: 8px; }
+    .card-tag   { padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+    .t-llm      { background: var(--pu-bg); color: var(--pu); }
+    .t-research { background: var(--cy-bg); color: var(--cy); }
+    .t-safety   { background: var(--pk-bg); color: var(--pk); }
+    .t-open     { background: var(--gr-bg); color: var(--gr); }
+    .t-industry { background: var(--yw-bg); color: var(--yw); }
+    .t-multi    { background: #0A1A1A;      color: var(--cy); }
+
+    .card-source  { font-size: 11px; color: var(--tx-3); font-family: 'JetBrains Mono', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .card-spacer  { flex: 1; }
+    .card-time    { font-size: 11px; color: var(--tx-4); font-family: 'JetBrains Mono', monospace; white-space: nowrap; flex-shrink: 0; }
+    .card-title   { font-size: 16px; font-weight: 700; color: var(--tx-1); line-height: 1.4; }
+    .card-desc    { font-size: 13px; color: var(--tx-3); line-height: 1.6; }
+    .card-foot    { display: flex; align-items: center; gap: 8px; }
+    .card-more    { font-size: 12px; font-weight: 500; transition: opacity .2s; }
+    .card-more:hover { opacity: .75; }
+    .card-foot-sp { flex: 1; }
+    .card-src     { font-size: 10px; color: var(--tx-5); font-family: 'JetBrains Mono', monospace; }
+
+    .empty { text-align: center; padding: 48px 0; color: var(--tx-3); font-size: 14px; }
+
+    /* ─── Sidebar ────────────────────────────────────── */
+    .sidebar { width: 300px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
+    .sb-box {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 20px; display: flex; flex-direction: column; gap: 12px;
+    }
+    .sb-title { font-size: 11px; font-weight: 600; color: var(--tx-2); font-family: 'JetBrains Mono', monospace; letter-spacing: 2px; }
+
+    .trend-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border-sub); }
+    .trend-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .trend-rank  { font-size: 11px; font-weight: 600; font-family: 'JetBrains Mono', monospace; width: 20px; flex-shrink: 0; }
+    .trend-text  { flex: 1; font-size: 13px; color: #D4D4D8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .trend-count { font-size: 10px; color: var(--tx-4); font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }
+
+    .src-note { font-size: 11px; color: var(--tx-4); line-height: 1.5; }
+    .src-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border-sub); }
+    .src-item:last-child { border-bottom: none; }
+    .src-dot  { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .src-name { flex: 1; font-size: 12px; color: #D4D4D8; min-width: 0; }
+    .src-url  { font-size: 10px; color: var(--tx-5); font-family: 'JetBrains Mono', monospace; }
+
+    .upd-row  { display: flex; align-items: center; gap: 6px; padding-top: 8px; }
+    .upd-row svg  { width: 12px; height: 12px; stroke: var(--tx-5); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .upd-row span { font-size: 10px; color: var(--tx-5); font-family: 'JetBrains Mono', monospace; }
+
+    /* ─── Footer ─────────────────────────────────────── */
+    .footer {
+      background: var(--bg-footer); border-top: 1px solid var(--border-sub);
+      padding: 20px 120px; display: flex; flex-direction: column; gap: 12px;
+    }
+    .footer-top   { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .footer-logo  { font-size: 14px; font-weight: 700; color: var(--pu); }
+    .footer-dot   { font-size: 14px; color: var(--tx-5); }
+    .footer-desc  { font-size: 12px; color: var(--tx-4); }
+    .footer-sp    { flex: 1; min-width: 16px; }
+    .footer-disc  { font-size: 11px; color: var(--tx-5); }
+    .footer-src-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .footer-src-lbl { font-size: 11px; color: var(--tx-4); font-family: 'JetBrains Mono', monospace; }
+    .footer-tag { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; font-size: 10px; color: var(--tx-3); font-family: 'JetBrains Mono', monospace; }
+    .footer-tag.more { color: var(--pu); }
+
+    /* ─── Responsive ─────────────────────────────────── */
+    @media (max-width: 1200px) {
+      .navbar, .stats-section, .main, .footer { padding-left: 40px; padding-right: 40px; }
+    }
+    @media (max-width: 960px) {
+      .main { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .navbar, .stats-section, .main, .footer { padding-left: 16px; padding-right: 16px; }
+      .nav-sub, .nav-date { display: none; }
+      .stats-row { grid-template-columns: 1fr; }
+      .card-desc { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ════════════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo">AI</div>
+    <span class="nav-title">AI Daily</span>
+    <span class="nav-sub mono" data-i18n="subtitle">每日资讯</span>
+  </div>
+  <div class="nav-spacer"></div>
+  <span class="nav-date mono" id="nav-date"></span>
+  <div class="nav-div"></div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn"        id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- ═══ STATS ═════════════════════════════════════════════════════════ -->
+<section class="stats-section">
+  <div class="section-label mono" data-i18n="overviewLabel">今日概览 · TODAY'S OVERVIEW</div>
+  <div class="stats-row">
+
+    <div class="stat-card">
+      <div class="stat-icon pu-i">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+      </div>
+      <div class="stat-info">
+        <div class="stat-num" id="stat-count">8</div>
+        <div class="stat-label" data-i18n="statNews">今日新闻 / News Today</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon cy-i">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <div class="stat-info">
+        <div class="stat-num">12</div>
+        <div class="stat-label" data-i18n="statSources">数据来源 / Sources</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon pk-i">
+        <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <div class="stat-info">
+        <div class="stat-num sm" id="stat-trend">GPT-5</div>
+        <div class="stat-label" data-i18n="statTrending">热门话题 / Trending</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ MAIN ══════════════════════════════════════════════════════════ -->
+<main class="main">
+
+  <!-- NEWS FEED -->
+  <section class="feed">
+    <div class="feed-hdr">
+      <span class="feed-title mono" data-i18n="latestNews">最新资讯 · LATEST NEWS</span>
+      <div class="feed-spacer"></div>
+      <div class="filter-row" id="filter-row"></div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input mono" id="search-input" placeholder="搜索 / Search…" oninput="renderNews()" />
+      </div>
+    </div>
+    <div id="news-list"></div>
+  </section>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sb-box">
+      <div class="sb-title mono" data-i18n="trendingTitle">热门话题 · TRENDING</div>
+      <div id="trending-list"></div>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title mono" data-i18n="sourcesTitle">数据来源 · DATA SOURCES</div>
+      <p class="src-note" data-i18n="srcNote">以下平台的公开内容经过聚合与摘要处理</p>
+      <div id="sources-list"></div>
+      <div class="upd-row">
+        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        <span data-i18n="autoRefresh">每小时自动抓取更新 · Auto-refresh hourly</span>
+      </div>
+    </div>
+
+  </aside>
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <span class="footer-logo">AI Daily</span>
+    <span class="footer-dot">·</span>
+    <span class="footer-desc" data-i18n="footerDesc">每日 AI 资讯聚合平台 · Aggregated AI News Platform</span>
+    <div class="footer-sp"></div>
+    <span class="footer-disc" data-i18n="footerDisc">内容仅供参考，版权归原作者所有</span>
+  </div>
+  <div class="footer-src-row">
+    <span class="footer-src-lbl mono" data-i18n="footerSrcLbl">数据来源:</span>
+    <span class="footer-tag mono">openai.com</span>
+    <span class="footer-tag mono">anthropic.com</span>
+    <span class="footer-tag mono">arxiv.org</span>
+    <span class="footer-tag mono">huggingface.co</span>
+    <span class="footer-tag mono">techcrunch.com</span>
+    <span class="footer-tag mono">nature.com</span>
+    <span class="footer-tag mono">deepmind.google</span>
+    <span class="footer-tag mono">venturebeat.com</span>
+    <span class="footer-tag more mono">+ 4 more</span>
+  </div>
+</footer>
+
+<!-- ═══ SCRIPT ════════════════════════════════════════════════════════ -->
+<script>
+/* ─────────────────────── DATA ─────────────────────── */
+
+const NEWS = [
+  {
+    id: 1, category: 'llm', hoursAgo: 2,
+    source: 'OpenAI Blog', srcUrl: 'openai.com/blog', link: 'https://openai.com/blog',
+    title: {
+      zh: 'OpenAI 发布 GPT-5 预览版，多模态推理能力大幅提升',
+      en: 'OpenAI Releases GPT-5 Preview with Major Multimodal Reasoning Upgrades'
+    },
+    desc: {
+      zh: 'OpenAI 正式推出 GPT-5 预览版，在多模态推理与代码生成方面取得重大突破。新模型在主流基准测试中全面超越 GPT-4o，支持图像、音频与文本混合输入。',
+      en: 'OpenAI released GPT-5 Preview, showing major gains in multimodal reasoning and code generation. The model outperforms GPT-4o across major benchmarks with mixed image, audio, and text input support.'
+    }
+  },
+  {
+    id: 2, category: 'research', hoursAgo: 3,
+    source: 'Nature / DeepMind', srcUrl: 'nature.com · deepmind.google', link: 'https://deepmind.google',
+    title: {
+      zh: 'Google DeepMind AlphaFold 3 突破蛋白质-DNA 相互作用预测',
+      en: 'Google DeepMind AlphaFold 3 Breaks Through Protein-DNA Interaction Prediction'
+    },
+    desc: {
+      zh: 'DeepMind 的 AlphaFold 3 现在不仅能预测蛋白质结构，还能预测蛋白质-DNA 与蛋白质-配体相互作用，为药物发现和合成生物学开辟了全新可能。',
+      en: "AlphaFold 3 now predicts protein-DNA and protein-ligand interactions in addition to protein structures, opening new avenues for drug discovery and synthetic biology."
+    }
+  },
+  {
+    id: 3, category: 'safety', hoursAgo: 5,
+    source: 'Anthropic Blog', srcUrl: 'anthropic.com', link: 'https://anthropic.com',
+    title: {
+      zh: 'Anthropic 发布 Claude 4 系统卡：全面披露模型安全评估结果',
+      en: 'Anthropic Releases Claude 4 System Card with Full Safety Evaluation Disclosure'
+    },
+    desc: {
+      zh: 'Anthropic 发布了 Claude 4 的系统卡，详细披露安全评估内容，涵盖 CBRN 风险、自主性风险以及公开部署前的社会影响分析。',
+      en: 'Anthropic published the Claude 4 system card with detailed safety evaluations: CBRN risk, autonomy risk, and societal impact assessments conducted before deployment.'
+    }
+  },
+  {
+    id: 4, category: 'open', hoursAgo: 6,
+    source: 'Hugging Face / Meta AI', srcUrl: 'huggingface.co · ai.meta.com', link: 'https://huggingface.co',
+    title: {
+      zh: 'Meta 开源 Llama 4 多模态系列，Scout 与 Maverick 双版本上线',
+      en: 'Meta Open-Sources Llama 4 Multimodal Series: Scout & Maverick Now Available'
+    },
+    desc: {
+      zh: 'Meta 发布 Llama 4 Scout（170 亿激活参数）和 Maverick（MoE 架构），两款模型均支持多模态输入，已在 Hugging Face 以商业友好许可证开放使用。',
+      en: 'Meta released Llama 4 Scout (17B active params) and Maverick (MoE), both supporting multimodal input. Available on Hugging Face under a commercial-friendly license.'
+    }
+  },
+  {
+    id: 5, category: 'industry', hoursAgo: 8,
+    source: 'TechCrunch', srcUrl: 'techcrunch.com', link: 'https://techcrunch.com',
+    title: {
+      zh: '微软 Copilot 全线集成 GPT-5，企业用户率先获得访问权限',
+      en: 'Microsoft Copilot Integrates GPT-5 Across All Products, Enterprise First'
+    },
+    desc: {
+      zh: '微软宣布 Microsoft 365 Copilot 将全面集成 GPT-5，企业版用户优先获得体验资格。升级后在文档摘要和代码辅助准确率方面有显著提升。',
+      en: 'Microsoft announced GPT-5 integration across Copilot for Microsoft 365, with enterprise customers getting priority rollout. Accuracy in summarization and coding assistance improves noticeably.'
+    }
+  },
+  {
+    id: 6, category: 'industry', hoursAgo: 10,
+    source: 'VentureBeat', srcUrl: 'venturebeat.com', link: 'https://venturebeat.com',
+    title: {
+      zh: 'AI 芯片市场 2026 年预计突破 5000 亿美元，英伟达持续领跑',
+      en: 'AI Chip Market Forecast to Exceed $500B in 2026, NVIDIA Leads Growth'
+    },
+    desc: {
+      zh: '最新市场报告显示，受大模型训练与推理需求驱动，全球 AI 芯片市场预计 2026 年突破 5000 亿美元，英伟达 H200/B100 系列继续主导市场。',
+      en: 'A new market report projects the global AI chip market to exceed $500B in 2026, driven by LLM training and inference demand. NVIDIA dominates with its H200/B100 product lines.'
+    }
+  },
+  {
+    id: 7, category: 'research', hoursAgo: 12,
+    source: 'ArXiv / Stanford', srcUrl: 'arxiv.org · hai.stanford.edu', link: 'https://arxiv.org',
+    title: {
+      zh: '斯坦福研究：思维链提示对小型模型效果有限，需要新策略',
+      en: 'Stanford: Chain-of-Thought Prompting Loses Effectiveness in Small Models'
+    },
+    desc: {
+      zh: '斯坦福最新研究表明，思维链提示在参数量低于 7B 的模型上效果显著下降，研究团队提出"渐进式推理"策略以弥补这一差距。',
+      en: 'A Stanford study shows chain-of-thought prompting loses effectiveness in sub-7B models. The team proposes a "progressive reasoning" strategy to bridge the gap.'
+    }
+  },
+  {
+    id: 8, category: 'multi', hoursAgo: 14,
+    source: 'MIT Technology Review', srcUrl: 'technologyreview.com', link: 'https://technologyreview.com',
+    title: {
+      zh: 'AI 视频生成大比拼：Sora vs Runway vs Kling 全维度横向测评',
+      en: 'AI Video Showdown: Sora vs Runway vs Kling — Full Comparative Review'
+    },
+    desc: {
+      zh: 'MIT Tech Review 对三款主流 AI 视频生成工具进行系统测评，从画质、一致性、运动流畅度与提示遵从度四维度对比，各有优劣。',
+      en: 'MIT Tech Review evaluated Sora, Runway, and Kling across quality, consistency, motion smoothness, and prompt adherence — revealing nuanced trade-offs among the three tools.'
+    }
+  },
+];
+
+const TRENDING = [
+  { rank: '01', color: '#A855F7', text: { zh: 'GPT-5 发布',      en: 'GPT-5 Release'        }, count: '1.2k' },
+  { rank: '02', color: '#06B6D4', text: { zh: 'AlphaFold 3',    en: 'AlphaFold 3'          }, count: '874'  },
+  { rank: '03', color: '#EC4899', text: { zh: 'Claude 安全评估', en: 'Claude Safety Card'   }, count: '621'  },
+  { rank: '04', color: '#EAB308', text: { zh: 'Llama 4 开源',    en: 'Llama 4 Open-Source'  }, count: '509'  },
+  { rank: '05', color: '#22C55E', text: { zh: 'AI 芯片市场',     en: 'AI Chip Market'       }, count: '388'  },
+];
+
+const SOURCES = [
+  { name: 'OpenAI Blog',           url: 'openai.com',            color: '#A855F7' },
+  { name: 'Google DeepMind',       url: 'deepmind.google',       color: '#06B6D4' },
+  { name: 'Anthropic Blog',        url: 'anthropic.com',         color: '#EC4899' },
+  { name: 'Hugging Face',          url: 'huggingface.co',        color: '#22C55E' },
+  { name: 'TechCrunch AI',         url: 'techcrunch.com',        color: '#EAB308' },
+  { name: 'MIT Technology Review', url: 'technologyreview.com',  color: '#A855F7' },
+  { name: 'VentureBeat AI',        url: 'venturebeat.com',       color: '#06B6D4' },
+  { name: 'ArXiv (cs.AI/cs.LG)',  url: 'arxiv.org',             color: '#EC4899' },
+  { name: 'The Verge AI',          url: 'theverge.com',          color: '#22C55E' },
+  { name: 'Nature',                url: 'nature.com',            color: '#EAB308' },
+  { name: 'Stanford HAI',          url: 'hai.stanford.edu',      color: '#A855F7' },
+  { name: 'Meta AI Blog',          url: 'ai.meta.com',           color: '#06B6D4' },
+];
+
+/* ─────────────────────── i18n ─────────────────────── */
+
+const T = {
+  zh: {
+    subtitle: '每日资讯',
+    overviewLabel: '今日概览 · TODAY\'S OVERVIEW',
+    statNews: '今日新闻 / News Today',
+    statSources: '数据来源 / Sources',
+    statTrending: '热门话题 / Trending',
+    latestNews: '最新资讯 · LATEST NEWS',
+    catAll: '全部', catLLM: 'LLM', catResearch: '研究',
+    catSafety: '安全', catOpen: '开源', catIndustry: '行业', catMulti: '多模态',
+    trendingTitle: '热门话题 · TRENDING',
+    sourcesTitle: '数据来源 · DATA SOURCES',
+    srcNote: '以下平台的公开内容经过聚合与摘要处理',
+    autoRefresh: '每小时自动抓取更新 · Auto-refresh hourly',
+    readMore: '阅读原文 →',
+    timeAgo: n => `${n}小时前`,
+    footerDesc: '每日 AI 资讯聚合平台 · Aggregated AI News Platform',
+    footerDisc: '内容仅供参考，版权归原作者所有',
+    footerSrcLbl: '数据来源:',
+    srcLabel: '来源:',
+    noResults: '暂无相关资讯',
+    searchPH: '搜索新闻、来源…',
+  },
+  en: {
+    subtitle: 'Daily AI News',
+    overviewLabel: 'TODAY\'S OVERVIEW',
+    statNews: 'News Today',
+    statSources: 'Data Sources',
+    statTrending: 'Trending Topic',
+    latestNews: 'LATEST NEWS',
+    catAll: 'All', catLLM: 'LLM', catResearch: 'Research',
+    catSafety: 'Safety', catOpen: 'Open Source', catIndustry: 'Industry', catMulti: 'Multimodal',
+    trendingTitle: 'TRENDING',
+    sourcesTitle: 'DATA SOURCES',
+    srcNote: 'Public content from these platforms is aggregated and summarized.',
+    autoRefresh: 'Auto-refreshed every hour',
+    readMore: 'Read More →',
+    timeAgo: n => `${n}h ago`,
+    footerDesc: 'Aggregated AI News Platform',
+    footerDisc: 'Content for reference only. All rights belong to original authors.',
+    footerSrcLbl: 'Sources:',
+    srcLabel: 'Source:',
+    noResults: 'No articles found',
+    searchPH: 'Search news, sources…',
+  },
+};
+
+/* ─────────────────────── STATE ────────────────────── */
+
+let lang   = 'zh';
+let filter = 'all';
+
+/* ─────────────────────── UTILS ────────────────────── */
+
+function today() {
+  const d = new Date();
+  return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+}
+
+const CAT_CLASS = { llm:'t-llm', research:'t-research', safety:'t-safety', open:'t-open', industry:'t-industry', multi:'t-multi' };
+const CAT_COLOR = { llm:'#A855F7', research:'#06B6D4', safety:'#EC4899', open:'#22C55E', industry:'#EAB308', multi:'#06B6D4' };
+const CAT_KEY   = { llm:'catLLM', research:'catResearch', safety:'catSafety', open:'catOpen', industry:'catIndustry', multi:'catMulti' };
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ─────────────────────── RENDER ───────────────────── */
+
+function renderI18n() {
+  const t = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    if (typeof v === 'string') el.textContent = v;
+  });
+  const si = document.getElementById('search-input');
+  if (si) si.placeholder = t.searchPH;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.title = lang === 'zh' ? 'AI Daily · 每日 AI 资讯' : 'AI Daily · Daily AI News';
+}
+
+function renderFilters() {
+  const t = T[lang];
+  const cats = [
+    ['all','catAll'], ['llm','catLLM'], ['research','catResearch'],
+    ['safety','catSafety'], ['open','catOpen'], ['industry','catIndustry'], ['multi','catMulti'],
+  ];
+  document.getElementById('filter-row').innerHTML = cats.map(([k, lk]) =>
+    `<button class="filter-btn${filter===k?' active':''}" onclick="setFilter('${k}')">${esc(t[lk])}</button>`
+  ).join('');
+}
+
+function renderNews() {
+  const t = T[lang];
+  const q = (document.getElementById('search-input').value || '').toLowerCase().trim();
+  const list = document.getElementById('news-list');
+
+  const items = NEWS.filter(n => {
+    const matchCat = filter === 'all' || n.category === filter;
+    const matchQ   = !q
+      || n.title[lang].toLowerCase().includes(q)
+      || n.desc[lang].toLowerCase().includes(q)
+      || n.source.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  document.getElementById('stat-count').textContent = NEWS.length;
+
+  if (!items.length) {
+    list.innerHTML = `<div class="empty">${esc(t.noResults)}</div>`;
+    return;
+  }
+
+  list.innerHTML = items.map((n, i) => {
+    const color = CAT_COLOR[n.category] || '#A855F7';
+    return `
+      <div class="news-card" style="animation-delay:${i * 0.05}s">
+        <div class="card-top">
+          <span class="card-tag ${CAT_CLASS[n.category] || ''}">${esc(t[CAT_KEY[n.category]] || n.category)}</span>
+          <span class="card-source mono">${esc(n.source)}</span>
+          <div class="card-spacer"></div>
+          <span class="card-time mono">${esc(t.timeAgo(n.hoursAgo))}</span>
+        </div>
+        <div class="card-title">${esc(n.title[lang])}</div>
+        <div class="card-desc">${esc(n.desc[lang])}</div>
+        <div class="card-foot">
+          <a class="card-more" href="${esc(n.link)}" target="_blank" rel="noopener noreferrer" style="color:${color}">${esc(t.readMore)}</a>
+          <div class="card-foot-sp"></div>
+          <span class="card-src mono">${esc(t.srcLabel)} ${esc(n.srcUrl)}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderTrending() {
+  document.getElementById('trending-list').innerHTML = TRENDING.map(tr => `
+    <div class="trend-item">
+      <span class="trend-rank" style="color:${tr.color}">${esc(tr.rank)}</span>
+      <span class="trend-text">${esc(tr.text[lang])}</span>
+      <span class="trend-count mono">${esc(tr.count)}</span>
+    </div>`).join('');
+}
+
+function renderSources() {
+  document.getElementById('sources-list').innerHTML = SOURCES.map(s => `
+    <div class="src-item">
+      <span class="src-dot" style="background:${s.color}"></span>
+      <span class="src-name">${esc(s.name)}</span>
+      <span class="src-url mono">${esc(s.url)}</span>
+    </div>`).join('');
+}
+
+function renderAll() {
+  renderI18n();
+  renderFilters();
+  renderNews();
+  renderTrending();
+  renderSources();
+}
+
+/* ─────────────────────── ACTIONS ──────────────────── */
+
+function setLang(l) {
+  lang = l;
+  document.getElementById('btn-zh').classList.toggle('active', l === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  renderAll();
+}
+
+function setFilter(f) {
+  filter = f;
+  renderAll();
+}
+
+/* ─────────────────────── INIT ─────────────────────── */
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('nav-date').textContent = today();
+  renderAll();
+
+  /* ── Load live data from data.json ── */
+  fetch('/data.json')
+    .then(r => r.json())
+    .then(data => {
+      if (data.news && data.news.length) {
+        NEWS.splice(0, NEWS.length, ...data.news);
+      }
+      if (data.trending && data.trending.length) {
+        TRENDING.splice(0, TRENDING.length, ...data.trending);
+      }
+      if (data.sources && data.sources.length) {
+        SOURCES.splice(0, SOURCES.length, ...data.sources);
+      }
+      renderAll();
+      console.info('[AI Daily] Live data loaded from data.json');
+    })
+    .catch(err => {
+      console.warn('[AI Daily] Using static fallback:', err.message);
+    });
+});
+</script>
+</body>
+</html>
