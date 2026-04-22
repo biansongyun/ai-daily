@@ -46,16 +46,29 @@ ${text}`;
   });
 
   const rawText = await res.text();
+  console.log('🔍 HTTP status:', res.status);
+  console.log('🔍 Raw response text:', rawText.substring(0, 2000));
 
   if (!res.ok) {
     throw new Error('LLM API error ' + res.status + ': ' + rawText.substring(0, 200));
   }
 
-   const data = JSON.parse(rawText);
-  let content = data.choices[0].message.content;
-  console.log('📝 Raw LLM content:', content.substring(0, 500));
+  const data = JSON.parse(rawText);
+  console.log('🔍 Parsed data keys:', Object.keys(data));
 
-  // Extract JSON from markdown code block if present
+  if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+    console.error('🔍 Unexpected response structure:', JSON.stringify(data, null, 2));
+    throw new Error('Unexpected API response structure');
+  }
+
+  let content = data.choices[0].message.content;
+  console.log('📝 LLM content length:', content ? content.length : 0);
+  console.log('📝 LLM content preview:', content ? content.substring(0, 500) : '(empty)');
+
+  if (!content || !content.trim()) {
+    throw new Error('LLM returned empty content');
+  }
+
   const match = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
   if (match) content = match[1];
 
