@@ -1,0 +1,242 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "category": "llm",
+      "hoursAgo": 2,
+      "source": "OpenAI Blog",
+      "srcUrl": "openai.com/blog",
+      "link": "https://openai.com/blog",
+      "title": {
+        "zh": "OpenAI 发布 GPT-5 预览版，多模态推理能力大幅提升",
+        "en": "OpenAI Releases GPT-5 Preview with Major Multimodal Reasoning Upgrades"
+      },
+      "desc": {
+        "zh": "OpenAI 正式推出 GPT-5 预览版，在多模态推理与代码生成方面取得重大突破。新模型在主流基准测试中全面超越 GPT-4o，支持图像、音频与文本混合输入。",
+        "en": "OpenAI released GPT-5 Preview, showing major gains in multimodal reasoning and code generation. The model outperforms GPT-4o across major benchmarks with mixed image, audio, and text input support."
+      }
+    },
+    {
+      "id": 2,
+      "category": "research",
+      "hoursAgo": 3,
+      "source": "Nature / DeepMind",
+      "srcUrl": "nature.com · deepmind.google",
+      "link": "https://deepmind.google",
+      "title": {
+        "zh": "Google DeepMind AlphaFold 3 突破蛋白质-DNA 相互作用预测",
+        "en": "Google DeepMind AlphaFold 3 Breaks Through Protein-DNA Interaction Prediction"
+      },
+      "desc": {
+        "zh": "DeepMind 的 AlphaFold 3 现在不仅能预测蛋白质结构，还能预测蛋白质-DNA 与蛋白质-配体相互作用，为药物发现和合成生物学开辟了全新可能。",
+        "en": "AlphaFold 3 now predicts protein-DNA and protein-ligand interactions in addition to protein structures, opening new avenues for drug discovery and synthetic biology."
+      }
+    },
+    {
+      "id": 3,
+      "category": "safety",
+      "hoursAgo": 5,
+      "source": "Anthropic Blog",
+      "srcUrl": "anthropic.com",
+      "link": "https://anthropic.com",
+      "title": {
+        "zh": "Anthropic 发布 Claude 4 系统卡：全面披露模型安全评估结果",
+        "en": "Anthropic Releases Claude 4 System Card with Full Safety Evaluation Disclosure"
+      },
+      "desc": {
+        "zh": "Anthropic 发布了 Claude 4 的系统卡，详细披露安全评估内容，涵盖 CBRN 风险、自主性风险以及公开部署前的社会影响分析。",
+        "en": "Anthropic published the Claude 4 system card with detailed safety evaluations: CBRN risk, autonomy risk, and societal impact assessments conducted before deployment."
+      }
+    },
+    {
+      "id": 4,
+      "category": "open",
+      "hoursAgo": 6,
+      "source": "Hugging Face / Meta AI",
+      "srcUrl": "huggingface.co · ai.meta.com",
+      "link": "https://huggingface.co",
+      "title": {
+        "zh": "Meta 开源 Llama 4 多模态系列，Scout 与 Maverick 双版本上线",
+        "en": "Meta Open-Sources Llama 4 Multimodal Series: Scout & Maverick Now Available"
+      },
+      "desc": {
+        "zh": "Meta 发布 Llama 4 Scout（170 亿激活参数）和 Maverick（MoE 架构），两款模型均支持多模态输入，已在 Hugging Face 以商业友好许可证开放使用。",
+        "en": "Meta released Llama 4 Scout (17B active params) and Maverick (MoE), both supporting multimodal input. Available on Hugging Face under a commercial-friendly license."
+      }
+    },
+    {
+      "id": 5,
+      "category": "industry",
+      "hoursAgo": 8,
+      "source": "TechCrunch",
+      "srcUrl": "techcrunch.com",
+      "link": "https://techcrunch.com",
+      "title": {
+        "zh": "微软 Copilot 全线集成 GPT-5，企业用户率先获得访问权限",
+        "en": "Microsoft Copilot Integrates GPT-5 Across All Products, Enterprise First"
+      },
+      "desc": {
+        "zh": "微软宣布 Microsoft 365 Copilot 将全面集成 GPT-5，企业版用户优先获得体验资格。升级后在文档摘要和代码辅助准确率方面有显著提升。",
+        "en": "Microsoft announced GPT-5 integration across Copilot for Microsoft 365, with enterprise customers getting priority rollout. Accuracy in summarization and coding assistance improves noticeably."
+      }
+    },
+    {
+      "id": 6,
+      "category": "industry",
+      "hoursAgo": 10,
+      "source": "VentureBeat",
+      "srcUrl": "venturebeat.com",
+      "link": "https://venturebeat.com",
+      "title": {
+        "zh": "AI 芯片市场 2026 年预计突破 5000 亿美元，英伟达持续领跑",
+        "en": "AI Chip Market Forecast to Exceed $500B in 2026, NVIDIA Leads Growth"
+      },
+      "desc": {
+        "zh": "最新市场报告显示，受大模型训练与推理需求驱动，全球 AI 芯片市场预计 2026 年突破 5000 亿美元，英伟达 H200/B100 系列继续主导市场。",
+        "en": "A new market report projects the global AI chip market to exceed $500B in 2026, driven by LLM training and inference demand. NVIDIA dominates with its H200/B100 product lines."
+      }
+    },
+    {
+      "id": 7,
+      "category": "research",
+      "hoursAgo": 12,
+      "source": "ArXiv / Stanford",
+      "srcUrl": "arxiv.org · hai.stanford.edu",
+      "link": "https://arxiv.org",
+      "title": {
+        "zh": "斯坦福研究：思维链提示对小型模型效果有限，需要新策略",
+        "en": "Stanford: Chain-of-Thought Prompting Loses Effectiveness in Small Models"
+      },
+      "desc": {
+        "zh": "斯坦福最新研究表明，思维链提示在参数量低于 7B 的模型上效果显著下降，研究团队提出\"渐进式推理\"策略以弥补这一差距。",
+        "en": "A Stanford study shows chain-of-thought prompting loses effectiveness in sub-7B models. The team proposes a \"progressive reasoning\" strategy to bridge the gap."
+      }
+    },
+    {
+      "id": 8,
+      "category": "multi",
+      "hoursAgo": 14,
+      "source": "MIT Technology Review",
+      "srcUrl": "technologyreview.com",
+      "link": "https://technologyreview.com",
+      "title": {
+        "zh": "AI 视频生成大比拼：Sora vs Runway vs Kling 全维度横向测评",
+        "en": "AI Video Showdown: Sora vs Runway vs Kling — Full Comparative Review"
+      },
+      "desc": {
+        "zh": "MIT Tech Review 对三款主流 AI 视频生成工具进行系统测评，从画质、一致性、运动流畅度与提示遵从度四维度对比，各有优劣。",
+        "en": "MIT Tech Review evaluated Sora, Runway, and Kling across quality, consistency, motion smoothness, and prompt adherence — revealing nuanced trade-offs among the three tools."
+      }
+    }
+  ],
+  "trending": [
+    {
+      "rank": "01",
+      "color": "#A855F7",
+      "text": {
+        "zh": "GPT-5 发布",
+        "en": "GPT-5 Release"
+      },
+      "count": "1.2k"
+    },
+    {
+      "rank": "02",
+      "color": "#06B6D4",
+      "text": {
+        "zh": "AlphaFold 3",
+        "en": "AlphaFold 3"
+      },
+      "count": "874"
+    },
+    {
+      "rank": "03",
+      "color": "#EC4899",
+      "text": {
+        "zh": "Claude 安全评估",
+        "en": "Claude Safety Card"
+      },
+      "count": "621"
+    },
+    {
+      "rank": "04",
+      "color": "#EAB308",
+      "text": {
+        "zh": "Llama 4 开源",
+        "en": "Llama 4 Open-Source"
+      },
+      "count": "509"
+    },
+    {
+      "rank": "05",
+      "color": "#22C55E",
+      "text": {
+        "zh": "AI 芯片市场",
+        "en": "AI Chip Market"
+      },
+      "count": "388"
+    }
+  ],
+  "sources": [
+    {
+      "name": "OpenAI Blog",
+      "url": "openai.com",
+      "color": "#A855F7"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "deepmind.google",
+      "color": "#06B6D4"
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "anthropic.com",
+      "color": "#EC4899"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "huggingface.co",
+      "color": "#22C55E"
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "techcrunch.com",
+      "color": "#EAB308"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "technologyreview.com",
+      "color": "#A855F7"
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "venturebeat.com",
+      "color": "#06B6D4"
+    },
+    {
+      "name": "ArXiv (cs.AI/cs.LG)",
+      "url": "arxiv.org",
+      "color": "#EC4899"
+    },
+    {
+      "name": "The Verge AI",
+      "url": "theverge.com",
+      "color": "#22C55E"
+    },
+    {
+      "name": "Nature",
+      "url": "nature.com",
+      "color": "#EAB308"
+    },
+    {
+      "name": "Stanford HAI",
+      "url": "hai.stanford.edu",
+      "color": "#A855F7"
+    },
+    {
+      "name": "Meta AI Blog",
+      "url": "ai.meta.com",
+      "color": "#06B6D4"
+    }
+  ],
+  "updatedAt": "2026-04-22T13:16:26.417Z"
+}

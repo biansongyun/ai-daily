@@ -53,12 +53,18 @@ ${text}`;
 
   const data = JSON.parse(rawText);
   let content = data.choices[0].message.content;
+  console.log('📝 Raw LLM content:', content.substring(0, 500));
 
   // Extract JSON from markdown code block if present
   const match = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
   if (match) content = match[1];
 
-  return JSON.parse(content.trim());
+  try {
+    return JSON.parse(content.trim());
+  } catch (parseErr) {
+    console.error('❌ JSON parse failed. Content preview:', content.substring(0, 300));
+    throw parseErr;
+  }
 }
 
 async function main() {
