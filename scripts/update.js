@@ -37,7 +37,7 @@ ${text}`;
       'User-Agent': 'Mozilla/5.0'
     },
     body: JSON.stringify({
-      model: 'openai',
+      model: 'mimo-v2-flash',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
       max_tokens: 2000,
