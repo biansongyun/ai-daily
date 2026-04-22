@@ -5,7 +5,7 @@ const API_KEY = process.env.API_KEY;
 const API_URL = 'https://token-plan-cn.xiaomimimo.com/v1/chat/completions';
 
 async function fetchHN() {
-  const url = 'https://hn.algolia.com/api/v1/search_by_date?query=artificial+intelligence+OR+machine+learning+OR+LLM&tags=story&hitsPerPage=10';
+  const url = 'https://hn.algolia.com/api/v1/search_by_date?query=artificial+intelligence+OR+machine+learning+OR+LLM&tags=story&hitsPerPage=5';
   const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
   if (!res.ok) throw new Error('HN API failed: ' + res.status);
   const data = await res.json();
@@ -37,10 +37,10 @@ ${text}`;
       'User-Agent': 'Mozilla/5.0'
     },
     body: JSON.stringify({
-      model: 'mimo-v2-omni',
+      model: 'mimo-v2-pro',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
-      max_tokens: 2000,
+      max_tokens: 1500,
       stream: false
     })
   });
