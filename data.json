@@ -2,241 +2,149 @@
   "news": [
     {
       "id": 1,
-      "category": "llm",
-      "hoursAgo": 2,
-      "source": "OpenAI Blog",
-      "srcUrl": "openai.com/blog",
-      "link": "https://openai.com/blog",
+      "category": "industry",
+      "hoursAgo": 3,
+      "source": "TechCrunch",
+      "srcUrl": "techcrunch.com",
+      "link": "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/",
       "title": {
-        "zh": "OpenAI 发布 GPT-5 预览版，多模态推理能力大幅提升",
-        "en": "OpenAI Releases GPT-5 Preview with Major Multimodal Reasoning Upgrades"
+        "zh": "Google 发布 Gemini 企业级 Agent 平台",
+        "en": "Google Unveils Gemini Enterprise Agent Platform"
       },
       "desc": {
-        "zh": "OpenAI 正式推出 GPT-5 预览版，在多模态推理与代码生成方面取得重大突破。新模型在主流基准测试中全面超越 GPT-4o，支持图像、音频与文本混合输入。",
-        "en": "OpenAI released GPT-5 Preview, showing major gains in multimodal reasoning and code generation. The model outperforms GPT-4o across major benchmarks with mixed image, audio, and text input support."
+        "zh": "在 Google Cloud Next 大会上，Sundar Pichai 宣布推出 Gemini Enterprise Agent Platform，帮助企业大规模构建和管理 AI Agent，支持 Claude Opus 等第三方模型，直接对标 Amazon Bedrock AgentCore 和 Microsoft Foundry。",
+        "en": "At Google Cloud Next, Sundar Pichai announced Gemini Enterprise Agent Platform for building and managing AI agents at enterprise scale, with support for third-party models like Claude Opus, competing with Amazon and Microsoft's enterprise agent tools."
       }
     },
     {
       "id": 2,
-      "category": "research",
-      "hoursAgo": 3,
-      "source": "Nature / DeepMind",
-      "srcUrl": "nature.com · deepmind.google",
-      "link": "https://deepmind.google",
+      "category": "multi",
+      "hoursAgo": 8,
+      "source": "TechCrunch",
+      "srcUrl": "techcrunch.com",
+      "link": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/",
       "title": {
-        "zh": "Google DeepMind AlphaFold 3 突破蛋白质-DNA 相互作用预测",
-        "en": "Google DeepMind AlphaFold 3 Breaks Through Protein-DNA Interaction Prediction"
+        "zh": "Microsoft 发布三款多模态基础模型",
+        "en": "Microsoft Releases Three Foundational Multimodal Models"
       },
       "desc": {
-        "zh": "DeepMind 的 AlphaFold 3 现在不仅能预测蛋白质结构，还能预测蛋白质-DNA 与蛋白质-配体相互作用，为药物发现和合成生物学开辟了全新可能。",
-        "en": "AlphaFold 3 now predicts protein-DNA and protein-ligand interactions in addition to protein structures, opening new avenues for drug discovery and synthetic biology."
+        "zh": "Microsoft AI 实验室发布 MAI-Transcribe-1（语音转录）、MAI-Voice-1（语音生成）和 MAI-Image-2（视频生成），由 Mustafa Suleyman 领导的团队开发，价格比 Google 和 OpenAI 更低。",
+        "en": "Microsoft AI lab released MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2, developed by Mustafa Suleyman's team. The models are positioned as cheaper alternatives to Google and OpenAI offerings."
       }
     },
     {
       "id": 3,
-      "category": "safety",
-      "hoursAgo": 5,
-      "source": "Anthropic Blog",
-      "srcUrl": "anthropic.com",
-      "link": "https://anthropic.com",
+      "category": "open",
+      "hoursAgo": 12,
+      "source": "TechCrunch",
+      "srcUrl": "techcrunch.com",
+      "link": "https://techcrunch.com/2026/04/07/arcee-trinity-large-thinking-open-source-model/",
       "title": {
-        "zh": "Anthropic 发布 Claude 4 系统卡：全面披露模型安全评估结果",
-        "en": "Anthropic Releases Claude 4 System Card with Full Safety Evaluation Disclosure"
+        "zh": "Arcee 开源 400B 参数推理模型 Trinity",
+        "en": "Arcee Open-Sources 400B-Parameter Reasoning Model Trinity"
       },
       "desc": {
-        "zh": "Anthropic 发布了 Claude 4 的系统卡，详细披露安全评估内容，涵盖 CBRN 风险、自主性风险以及公开部署前的社会影响分析。",
-        "en": "Anthropic published the Claude 4 system card with detailed safety evaluations: CBRN risk, autonomy risk, and societal impact assessments conducted before deployment."
+        "zh": "仅 26 人的美国初创公司 Arcee 以 2000 万美元预算训练出 4000 亿参数开源模型 Trinity Large Thinking，采用 Apache 2.0 许可证，旨在为西方企业提供中国开源模型之外的替代选择。",
+        "en": "26-person startup Arcee built a 400B-parameter open-source reasoning model on a $20M budget, released under Apache 2.0, positioning it as a Western alternative to Chinese open-source models."
       }
     },
     {
       "id": 4,
-      "category": "open",
-      "hoursAgo": 6,
-      "source": "Hugging Face / Meta AI",
-      "srcUrl": "huggingface.co · ai.meta.com",
-      "link": "https://huggingface.co",
+      "category": "safety",
+      "hoursAgo": 5,
+      "source": "The Verge",
+      "srcUrl": "theverge.com",
+      "link": "https://www.theverge.com/2026/4/17/anthropic-claude-mythos-cybersecurity-model",
       "title": {
-        "zh": "Meta 开源 Llama 4 多模态系列，Scout 与 Maverick 双版本上线",
-        "en": "Meta Open-Sources Llama 4 Multimodal Series: Scout & Maverick Now Available"
+        "zh": "Anthropic 发布 Claude Mythos 网络安全专用模型",
+        "en": "Anthropic Launches Claude Mythos Cybersecurity Model"
       },
       "desc": {
-        "zh": "Meta 发布 Llama 4 Scout（170 亿激活参数）和 Maverick（MoE 架构），两款模型均支持多模态输入，已在 Hugging Face 以商业友好许可证开放使用。",
-        "en": "Meta released Llama 4 Scout (17B active params) and Maverick (MoE), both supporting multimodal input. Available on Hugging Face under a commercial-friendly license."
+        "zh": "Anthropic 推出专为网络安全设计的 Claude Mythos Preview，已被 Nvidia、Apple 和 JPMorgan Chase 等大型企业采用，用于自动发现和修复高危系统漏洞。",
+        "en": "Anthropic launched Claude Mythos Preview, a cybersecurity-focused AI model now used by Nvidia, Apple, and JPMorgan Chase to autonomously discover and patch critical system vulnerabilities."
       }
     },
     {
       "id": 5,
       "category": "industry",
-      "hoursAgo": 8,
-      "source": "TechCrunch",
-      "srcUrl": "techcrunch.com",
-      "link": "https://techcrunch.com",
+      "hoursAgo": 10,
+      "source": "The Verge",
+      "srcUrl": "theverge.com",
+      "link": "https://www.theverge.com/2026/4/1/openai-funding-122-billion-users",
       "title": {
-        "zh": "微软 Copilot 全线集成 GPT-5，企业用户率先获得访问权限",
-        "en": "Microsoft Copilot Integrates GPT-5 Across All Products, Enterprise First"
+        "zh": "OpenAI 完成 1220 亿美元融资，周活用户达 9 亿",
+        "en": "OpenAI Closes $122B Round, Hits 900M Weekly Users"
       },
       "desc": {
-        "zh": "微软宣布 Microsoft 365 Copilot 将全面集成 GPT-5，企业版用户优先获得体验资格。升级后在文档摘要和代码辅助准确率方面有显著提升。",
-        "en": "Microsoft announced GPT-5 integration across Copilot for Microsoft 365, with enterprise customers getting priority rollout. Accuracy in summarization and coding assistance improves noticeably."
+        "zh": "OpenAI 最新私募融资由 Amazon、Nvidia、Softbank 和 Microsoft 参投，估值飙升。同时宣布结束视频生成器 Sora，转向构建集成 ChatGPT、Codex 和 Agent 的统一超级应用。",
+        "en": "OpenAI closed a $122B private funding round with Amazon, Nvidia, Softbank, and Microsoft. It also announced sunsetting video generator Sora to focus on a unified superapp integrating ChatGPT, Codex, and agents."
       }
     },
     {
       "id": 6,
-      "category": "industry",
-      "hoursAgo": 10,
-      "source": "VentureBeat",
-      "srcUrl": "venturebeat.com",
-      "link": "https://venturebeat.com",
+      "category": "safety",
+      "hoursAgo": 2,
+      "source": "Hacker News",
+      "srcUrl": "news.ycombinator.com",
+      "link": "https://news.ycombinator.com/newsguidelines.html#generated",
       "title": {
-        "zh": "AI 芯片市场 2026 年预计突破 5000 亿美元，英伟达持续领跑",
-        "en": "AI Chip Market Forecast to Exceed $500B in 2026, NVIDIA Leads Growth"
+        "zh": "Hacker News 明确禁止 AI 生成评论",
+        "en": "Hacker News Explicitly Bans AI-Generated Comments"
       },
       "desc": {
-        "zh": "最新市场报告显示，受大模型训练与推理需求驱动，全球 AI 芯片市场预计 2026 年突破 5000 亿美元，英伟达 H200/B100 系列继续主导市场。",
-        "en": "A new market report projects the global AI chip market to exceed $500B in 2026, driven by LLM training and inference demand. NVIDIA dominates with its H200/B100 product lines."
+        "zh": "Hacker News 更新社区指南，明确规定禁止发布由 LLM 生成或经 AI 编辑的评论，强调平台是用于人类之间真实对话的场所。该公告获得超过 4200 个点赞和 1600 条讨论。",
+        "en": "Hacker News updated guidelines to ban LLM-generated or AI-edited comments, emphasizing the platform is for genuine human conversation. The announcement received 4,200+ upvotes and 1,600 comments."
       }
     },
     {
       "id": 7,
-      "category": "research",
-      "hoursAgo": 12,
-      "source": "ArXiv / Stanford",
-      "srcUrl": "arxiv.org · hai.stanford.edu",
-      "link": "https://arxiv.org",
+      "category": "open",
+      "hoursAgo": 14,
+      "source": "Meta",
+      "srcUrl": "about.fb.com",
+      "link": "https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/",
       "title": {
-        "zh": "斯坦福研究：思维链提示对小型模型效果有限，需要新策略",
-        "en": "Stanford: Chain-of-Thought Prompting Loses Effectiveness in Small Models"
+        "zh": "Meta 重申开源 AI 是行业前进方向",
+        "en": "Meta Reaffirms Open Source AI as the Path Forward"
       },
       "desc": {
-        "zh": "斯坦福最新研究表明，思维链提示在参数量低于 7B 的模型上效果显著下降，研究团队提出\"渐进式推理\"策略以弥补这一差距。",
-        "en": "A Stanford study shows chain-of-thought prompting loses effectiveness in sub-7B models. The team proposes a \"progressive reasoning\" strategy to bridge the gap."
+        "zh": "Meta 发布官方博客阐述开源 AI 的战略价值，认为开放模型能加速创新、提升安全性，并避免 AI 权力过度集中。该文章在技术社区 Hacker News 获得 2300+ 点赞。",
+        "en": "Meta's official blog detailed the strategic value of open-source AI, arguing it accelerates innovation, improves safety, and prevents excessive concentration of AI power. The post gained 2,300+ upvotes on HN."
       }
     },
     {
       "id": 8,
-      "category": "multi",
-      "hoursAgo": 14,
-      "source": "MIT Technology Review",
-      "srcUrl": "technologyreview.com",
-      "link": "https://technologyreview.com",
+      "category": "research",
+      "hoursAgo": 6,
+      "source": "The Verge",
+      "srcUrl": "theverge.com",
+      "link": "https://www.theverge.com/2026/4/13/softbank-physical-ai-robotics",
       "title": {
-        "zh": "AI 视频生成大比拼：Sora vs Runway vs Kling 全维度横向测评",
-        "en": "AI Video Showdown: Sora vs Runway vs Kling — Full Comparative Review"
+        "zh": "SoftBank 成立物理 AI 公司，Sony 与 Honda 参与",
+        "en": "SoftBank Launches Physical AI Firm with Sony and Honda"
       },
       "desc": {
-        "zh": "MIT Tech Review 对三款主流 AI 视频生成工具进行系统测评，从画质、一致性、运动流畅度与提示遵从度四维度对比，各有优劣。",
-        "en": "MIT Tech Review evaluated Sora, Runway, and Kling across quality, consistency, motion smoothness, and prompt adherence — revealing nuanced trade-offs among the three tools."
+        "zh": "SoftBank 创建新公司研发能自主控制机器和机器人的物理 AI 模型，目标 2030 年实现。Sony、Honda 和日本制铁参与合作，被视为日本抗衡中美 AI 竞争的重要布局。",
+        "en": "SoftBank created a new company to develop physical AI models that autonomously control machines and robots by 2030. Sony, Honda, and Nippon Steel are partnering in what Japan sees as a key move to compete with US and Chinese AI."
       }
     }
   ],
   "trending": [
-    {
-      "rank": "01",
-      "color": "#A855F7",
-      "text": {
-        "zh": "GPT-5 发布",
-        "en": "GPT-5 Release"
-      },
-      "count": "1.2k"
-    },
-    {
-      "rank": "02",
-      "color": "#06B6D4",
-      "text": {
-        "zh": "AlphaFold 3",
-        "en": "AlphaFold 3"
-      },
-      "count": "874"
-    },
-    {
-      "rank": "03",
-      "color": "#EC4899",
-      "text": {
-        "zh": "Claude 安全评估",
-        "en": "Claude Safety Card"
-      },
-      "count": "621"
-    },
-    {
-      "rank": "04",
-      "color": "#EAB308",
-      "text": {
-        "zh": "Llama 4 开源",
-        "en": "Llama 4 Open-Source"
-      },
-      "count": "509"
-    },
-    {
-      "rank": "05",
-      "color": "#22C55E",
-      "text": {
-        "zh": "AI 芯片市场",
-        "en": "AI Chip Market"
-      },
-      "count": "388"
-    }
+    { "rank": "01", "color": "#A855F7", "text": { "zh": "AI Agent 平台大战", "en": "AI Agent Platform Wars" }, "count": "2.4k" },
+    { "rank": "02", "color": "#06B6D4", "text": { "zh": "开源大模型崛起", "en": "Open-Source LLM Rise" }, "count": "1.8k" },
+    { "rank": "03", "color": "#EC4899", "text": { "zh": "AI 网络安全", "en": "AI Cybersecurity" }, "count": "1.3k" },
+    { "rank": "04", "color": "#EAB308", "text": { "zh": "多模态基础模型", "en": "Multimodal Foundation Models" }, "count": "956" },
+    { "rank": "05", "color": "#22C55E", "text": { "zh": "企业级 AI 部署", "en": "Enterprise AI Adoption" }, "count": "742" }
   ],
   "sources": [
-    {
-      "name": "OpenAI Blog",
-      "url": "openai.com",
-      "color": "#A855F7"
-    },
-    {
-      "name": "Google DeepMind",
-      "url": "deepmind.google",
-      "color": "#06B6D4"
-    },
-    {
-      "name": "Anthropic Blog",
-      "url": "anthropic.com",
-      "color": "#EC4899"
-    },
-    {
-      "name": "Hugging Face",
-      "url": "huggingface.co",
-      "color": "#22C55E"
-    },
-    {
-      "name": "TechCrunch AI",
-      "url": "techcrunch.com",
-      "color": "#EAB308"
-    },
-    {
-      "name": "MIT Technology Review",
-      "url": "technologyreview.com",
-      "color": "#A855F7"
-    },
-    {
-      "name": "VentureBeat AI",
-      "url": "venturebeat.com",
-      "color": "#06B6D4"
-    },
-    {
-      "name": "ArXiv (cs.AI/cs.LG)",
-      "url": "arxiv.org",
-      "color": "#EC4899"
-    },
-    {
-      "name": "The Verge AI",
-      "url": "theverge.com",
-      "color": "#22C55E"
-    },
-    {
-      "name": "Nature",
-      "url": "nature.com",
-      "color": "#EAB308"
-    },
-    {
-      "name": "Stanford HAI",
-      "url": "hai.stanford.edu",
-      "color": "#A855F7"
-    },
-    {
-      "name": "Meta AI Blog",
-      "url": "ai.meta.com",
-      "color": "#06B6D4"
-    }
+    { "name": "TechCrunch", "url": "techcrunch.com", "color": "#EAB308" },
+    { "name": "The Verge", "url": "theverge.com", "color": "#06B6D4" },
+    { "name": "Hacker News", "url": "news.ycombinator.com", "color": "#FF6600" },
+    { "name": "OpenAI Blog", "url": "openai.com", "color": "#A855F7" },
+    { "name": "Anthropic Blog", "url": "anthropic.com", "color": "#EC4899" },
+    { "name": "Google DeepMind", "url": "deepmind.google", "color": "#06B6D4" },
+    { "name": "Meta AI", "url": "ai.meta.com", "color": "#22C55E" },
+    { "name": "ArXiv", "url": "arxiv.org", "color": "#B31B1B" }
   ],
-  "updatedAt": "2026-04-22T13:16:26.417Z"
+  "updatedAt": "2026-04-22T21:30:00.000Z"
 }
