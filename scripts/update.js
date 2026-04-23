@@ -18,7 +18,8 @@ async function fetchHN() {
 
 async function summarizeWithLLM(articles) {
   const text = articles.map((a, i) => `${i + 1}. ${a.title}\n   ${a.url}`).join('\n');
-  From these Hacker News articles, pick 6 most relevant AI news.
+
+  const prompt = `From these Hacker News articles, pick up to 6 most relevant AI news. Return ONLY JSON:
 
 {"news":[{"category":"llm|research|safety|open|industry|multi","source":"name","srcUrl":"domain","link":"url","title":{"zh":"...","en":"..."},"desc":{"zh":"...","en":"..."},"hoursAgo":1-24}],"trending":[{"rank":"01","color":"#A855F7","text":{"zh":"...","en":"..."},"count":"1.2k"},{"rank":"02","color":"#06B6D4","text":{"zh":"...","en":"..."},"count":"874"},{"rank":"03","color":"#EC4899","text":{"zh":"...","en":"..."},"count":"621"},{"rank":"04","color":"#EAB308","text":{"zh":"...","en":"..."},"count":"509"},{"rank":"05","color":"#22C55E","text":{"zh":"...","en":"..."},"count":"388"}]}
 
