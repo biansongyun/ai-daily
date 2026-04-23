@@ -5,7 +5,7 @@ const API_KEY = process.env.API_KEY;
 const API_URL = 'https://token-plan-cn.xiaomimimo.com/v1/chat/completions';
 
 async function fetchHN() {
-  const url = 'https://hn.algolia.com/api/v1/search_by_date?query=artificial+intelligence+OR+machine+learning+OR+LLM&tags=story&hitsPerPage=5';
+  const url = 'https://hn.algolia.com/api/v1/search_by_date?query=artificial+intelligence+OR+machine+learning+OR+LLM&tags=story&hitsPerPage=10';
   const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
   if (!res.ok) throw new Error('HN API failed: ' + res.status);
   const data = await res.json();
@@ -18,8 +18,7 @@ async function fetchHN() {
 
 async function summarizeWithLLM(articles) {
   const text = articles.map((a, i) => `${i + 1}. ${a.title}\n   ${a.url}`).join('\n');
-
-  const prompt = `From these Hacker News articles, pick 6 most relevant AI news. Return ONLY JSON:
+  From these Hacker News articles, pick 6 most relevant AI news.
 
 {"news":[{"category":"llm|research|safety|open|industry|multi","source":"name","srcUrl":"domain","link":"url","title":{"zh":"...","en":"..."},"desc":{"zh":"...","en":"..."},"hoursAgo":1-24}],"trending":[{"rank":"01","color":"#A855F7","text":{"zh":"...","en":"..."},"count":"1.2k"},{"rank":"02","color":"#06B6D4","text":{"zh":"...","en":"..."},"count":"874"},{"rank":"03","color":"#EC4899","text":{"zh":"...","en":"..."},"count":"621"},{"rank":"04","color":"#EAB308","text":{"zh":"...","en":"..."},"count":"509"},{"rank":"05","color":"#22C55E","text":{"zh":"...","en":"..."},"count":"388"}]}
 
@@ -40,7 +39,7 @@ ${text}`;
       model: 'mimo-v2-pro',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
-      max_tokens: 1500,
+      max_tokens: 4096,
       stream: false
     })
   });
