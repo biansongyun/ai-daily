@@ -1,150 +1,158 @@
 {
   "news": [
     {
-      "id": 1,
-      "category": "industry",
-      "hoursAgo": 3,
-      "source": "TechCrunch",
-      "srcUrl": "techcrunch.com",
-      "link": "https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/",
-      "title": {
-        "zh": "Google 发布 Gemini 企业级 Agent 平台",
-        "en": "Google Unveils Gemini Enterprise Agent Platform"
-      },
-      "desc": {
-        "zh": "在 Google Cloud Next 大会上，Sundar Pichai 宣布推出 Gemini Enterprise Agent Platform，帮助企业大规模构建和管理 AI Agent，支持 Claude Opus 等第三方模型，直接对标 Amazon Bedrock AgentCore 和 Microsoft Foundry。",
-        "en": "At Google Cloud Next, Sundar Pichai announced Gemini Enterprise Agent Platform for building and managing AI agents at enterprise scale, with support for third-party models like Claude Opus, competing with Amazon and Microsoft's enterprise agent tools."
-      }
-    },
-    {
-      "id": 2,
-      "category": "multi",
-      "hoursAgo": 8,
-      "source": "TechCrunch",
-      "srcUrl": "techcrunch.com",
-      "link": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/",
-      "title": {
-        "zh": "Microsoft 发布三款多模态基础模型",
-        "en": "Microsoft Releases Three Foundational Multimodal Models"
-      },
-      "desc": {
-        "zh": "Microsoft AI 实验室发布 MAI-Transcribe-1（语音转录）、MAI-Voice-1（语音生成）和 MAI-Image-2（视频生成），由 Mustafa Suleyman 领导的团队开发，价格比 Google 和 OpenAI 更低。",
-        "en": "Microsoft AI lab released MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2, developed by Mustafa Suleyman's team. The models are positioned as cheaper alternatives to Google and OpenAI offerings."
-      }
-    },
-    {
-      "id": 3,
       "category": "open",
-      "hoursAgo": 12,
-      "source": "TechCrunch",
-      "srcUrl": "techcrunch.com",
-      "link": "https://techcrunch.com/2026/04/07/arcee-trinity-large-thinking-open-source-model/",
-      "title": {
-        "zh": "Arcee 开源 400B 参数推理模型 Trinity",
-        "en": "Arcee Open-Sources 400B-Parameter Reasoning Model Trinity"
-      },
-      "desc": {
-        "zh": "仅 26 人的美国初创公司 Arcee 以 2000 万美元预算训练出 4000 亿参数开源模型 Trinity Large Thinking，采用 Apache 2.0 许可证，旨在为西方企业提供中国开源模型之外的替代选择。",
-        "en": "26-person startup Arcee built a 400B-parameter open-source reasoning model on a $20M budget, released under Apache 2.0, positioning it as a Western alternative to Chinese open-source models."
-      }
-    },
-    {
-      "id": 4,
-      "category": "safety",
-      "hoursAgo": 5,
-      "source": "The Verge",
-      "srcUrl": "theverge.com",
-      "link": "https://www.theverge.com/2026/4/17/anthropic-claude-mythos-cybersecurity-model",
-      "title": {
-        "zh": "Anthropic 发布 Claude Mythos 网络安全专用模型",
-        "en": "Anthropic Launches Claude Mythos Cybersecurity Model"
-      },
-      "desc": {
-        "zh": "Anthropic 推出专为网络安全设计的 Claude Mythos Preview，已被 Nvidia、Apple 和 JPMorgan Chase 等大型企业采用，用于自动发现和修复高危系统漏洞。",
-        "en": "Anthropic launched Claude Mythos Preview, a cybersecurity-focused AI model now used by Nvidia, Apple, and JPMorgan Chase to autonomously discover and patch critical system vulnerabilities."
-      }
-    },
-    {
-      "id": 5,
-      "category": "industry",
-      "hoursAgo": 10,
-      "source": "The Verge",
-      "srcUrl": "theverge.com",
-      "link": "https://www.theverge.com/2026/4/1/openai-funding-122-billion-users",
-      "title": {
-        "zh": "OpenAI 完成 1220 亿美元融资，周活用户达 9 亿",
-        "en": "OpenAI Closes $122B Round, Hits 900M Weekly Users"
-      },
-      "desc": {
-        "zh": "OpenAI 最新私募融资由 Amazon、Nvidia、Softbank 和 Microsoft 参投，估值飙升。同时宣布结束视频生成器 Sora，转向构建集成 ChatGPT、Codex 和 Agent 的统一超级应用。",
-        "en": "OpenAI closed a $122B private funding round with Amazon, Nvidia, Softbank, and Microsoft. It also announced sunsetting video generator Sora to focus on a unified superapp integrating ChatGPT, Codex, and agents."
-      }
-    },
-    {
-      "id": 6,
-      "category": "safety",
-      "hoursAgo": 2,
       "source": "Hacker News",
       "srcUrl": "news.ycombinator.com",
-      "link": "https://news.ycombinator.com/newsguidelines.html#generated",
+      "link": "https://news.ycombinator.com/item?id=46562867",
       "title": {
-        "zh": "Hacker News 明确禁止 AI 生成评论",
-        "en": "Hacker News Explicitly Bans AI-Generated Comments"
+        "zh": "MIT 非 AI 许可证",
+        "en": "MIT Non-AI License"
       },
       "desc": {
-        "zh": "Hacker News 更新社区指南，明确规定禁止发布由 LLM 生成或经 AI 编辑的评论，强调平台是用于人类之间真实对话的场所。该公告获得超过 4200 个点赞和 1600 条讨论。",
-        "en": "Hacker News updated guidelines to ban LLM-generated or AI-edited comments, emphasizing the platform is for genuine human conversation. The announcement received 4,200+ upvotes and 1,600 comments."
-      }
-    },
-    {
-      "id": 7,
-      "category": "open",
-      "hoursAgo": 14,
-      "source": "Meta",
-      "srcUrl": "about.fb.com",
-      "link": "https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/",
-      "title": {
-        "zh": "Meta 重申开源 AI 是行业前进方向",
-        "en": "Meta Reaffirms Open Source AI as the Path Forward"
+        "zh": "麻省理工学院发布了一项新的非AI许可证，旨在规范AI技术的使用。",
+        "en": "MIT releases a new non-AI license aimed at regulating the use of AI technology."
       },
-      "desc": {
-        "zh": "Meta 发布官方博客阐述开源 AI 的战略价值，认为开放模型能加速创新、提升安全性，并避免 AI 权力过度集中。该文章在技术社区 Hacker News 获得 2300+ 点赞。",
-        "en": "Meta's official blog detailed the strategic value of open-source AI, arguing it accelerates innovation, improves safety, and prevents excessive concentration of AI power. The post gained 2,300+ upvotes on HN."
-      }
+      "hoursAgo": 2,
+      "id": 1
     },
     {
-      "id": 8,
       "category": "research",
-      "hoursAgo": 6,
-      "source": "The Verge",
-      "srcUrl": "theverge.com",
-      "link": "https://www.theverge.com/2026/4/13/softbank-physical-ai-robotics",
+      "source": "Hacker News",
+      "srcUrl": "news.ycombinator.com",
+      "link": "https://news.ycombinator.com/item?id=45824262",
       "title": {
-        "zh": "SoftBank 成立物理 AI 公司，Sony 与 Honda 参与",
-        "en": "SoftBank Launches Physical AI Firm with Sony and Honda"
+        "zh": "超越ChatGPT：有意识AI的悄然诞生",
+        "en": "Beyond ChatGPT: The Silent Birth of Conscious AI"
       },
       "desc": {
-        "zh": "SoftBank 创建新公司研发能自主控制机器和机器人的物理 AI 模型，目标 2030 年实现。Sony、Honda 和日本制铁参与合作，被视为日本抗衡中美 AI 竞争的重要布局。",
-        "en": "SoftBank created a new company to develop physical AI models that autonomously control machines and robots by 2030. Sony, Honda, and Nippon Steel are partnering in what Japan sees as a key move to compete with US and Chinese AI."
-      }
+        "zh": "探讨人工智能意识的可能性及其对未来的潜在影响。",
+        "en": "Explores the possibility of AI consciousness and its potential impact on the future."
+      },
+      "hoursAgo": 5,
+      "id": 2
+    },
+    {
+      "category": "research",
+      "source": "Hacker News",
+      "srcUrl": "news.ycombinator.com",
+      "link": "https://news.ycombinator.com/item?id=44739505",
+      "title": {
+        "zh": "“人工智能用于人工智能研究与开发”",
+        "en": "“Intelligenza Artificiale for Artificial Intelligence Research and Development”"
+      },
+      "desc": {
+        "zh": "一个关于利用AI促进AI研究与发展的倡议或项目。",
+        "en": "An initiative or project on using AI to advance AI research and development."
+      },
+      "hoursAgo": 10,
+      "id": 3
+    },
+    {
+      "category": "industry",
+      "source": "AI/ML Weekly Digest",
+      "srcUrl": "hn-ai-newsletter.beehiiv.com",
+      "link": "https://hn-ai-newsletter.beehiiv.com/p/last-weeks-ai-highlights-hn-20",
+      "title": {
+        "zh": "Show HN: AI/ML 每周摘要 – 由LLM策划、总结和情感分析",
+        "en": "Show HN: AI/ML Weekly Digest – Curated by LLM, Summarized and Sentiment-Analyzed"
+      },
+      "desc": {
+        "zh": "一个由大型语言模型策划的AI/ML每周新闻摘要，包括总结和情感分析。",
+        "en": "A weekly AI/ML news digest curated by a large language model, including summaries and sentiment analysis."
+      },
+      "hoursAgo": 15,
+      "id": 4
     }
   ],
   "trending": [
-    { "rank": "01", "color": "#A855F7", "text": { "zh": "AI Agent 平台大战", "en": "AI Agent Platform Wars" }, "count": "2.4k" },
-    { "rank": "02", "color": "#06B6D4", "text": { "zh": "开源大模型崛起", "en": "Open-Source LLM Rise" }, "count": "1.8k" },
-    { "rank": "03", "color": "#EC4899", "text": { "zh": "AI 网络安全", "en": "AI Cybersecurity" }, "count": "1.3k" },
-    { "rank": "04", "color": "#EAB308", "text": { "zh": "多模态基础模型", "en": "Multimodal Foundation Models" }, "count": "956" },
-    { "rank": "05", "color": "#22C55E", "text": { "zh": "企业级 AI 部署", "en": "Enterprise AI Adoption" }, "count": "742" }
+    {
+      "rank": "01",
+      "color": "#A855F7",
+      "text": {
+        "zh": "AI伦理与安全",
+        "en": "AI Ethics and Safety"
+      },
+      "count": "1.2k"
+    },
+    {
+      "rank": "02",
+      "color": "#06B6D4",
+      "text": {
+        "zh": "开源AI模型",
+        "en": "Open Source AI Models"
+      },
+      "count": "874"
+    },
+    {
+      "rank": "03",
+      "color": "#EC4899",
+      "text": {
+        "zh": "大型语言模型",
+        "en": "Large Language Models"
+      },
+      "count": "621"
+    },
+    {
+      "rank": "04",
+      "color": "#EAB308",
+      "text": {
+        "zh": "AI工业应用",
+        "en": "AI in Industry Applications"
+      },
+      "count": "509"
+    },
+    {
+      "rank": "05",
+      "color": "#22C55E",
+      "text": {
+        "zh": "AI研究突破",
+        "en": "AI Research Breakthroughs"
+      },
+      "count": "388"
+    }
   ],
   "sources": [
-    { "name": "TechCrunch", "url": "techcrunch.com", "color": "#EAB308" },
-    { "name": "The Verge", "url": "theverge.com", "color": "#06B6D4" },
-    { "name": "Hacker News", "url": "news.ycombinator.com", "color": "#FF6600" },
-    { "name": "OpenAI Blog", "url": "openai.com", "color": "#A855F7" },
-    { "name": "Anthropic Blog", "url": "anthropic.com", "color": "#EC4899" },
-    { "name": "Google DeepMind", "url": "deepmind.google", "color": "#06B6D4" },
-    { "name": "Meta AI", "url": "ai.meta.com", "color": "#22C55E" },
-    { "name": "ArXiv", "url": "arxiv.org", "color": "#B31B1B" }
+    {
+      "name": "Hacker News",
+      "url": "news.ycombinator.com",
+      "color": "#FF6600"
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "openai.com",
+      "color": "#A855F7"
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "anthropic.com",
+      "color": "#EC4899"
+    },
+    {
+      "name": "ArXiv",
+      "url": "arxiv.org",
+      "color": "#B31B1B"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "huggingface.co",
+      "color": "#22C55E"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "deepmind.google",
+      "color": "#06B6D4"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "techcrunch.com",
+      "color": "#EAB308"
+    },
+    {
+      "name": "MIT Tech Review",
+      "url": "technologyreview.com",
+      "color": "#A855F7"
+    }
   ],
-  "updatedAt": "2026-04-22T21:30:00.000Z"
+  "updatedAt": "2026-05-06T05:54:53.852Z"
 }
