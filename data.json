@@ -6,14 +6,14 @@
       "srcUrl": "news.ycombinator.com",
       "link": "https://news.ycombinator.com/item?id=46562867",
       "title": {
-        "zh": "MIT 非 AI 许可证",
+        "zh": "MIT 非AI许可证",
         "en": "MIT Non-AI License"
       },
       "desc": {
-        "zh": "麻省理工学院发布了一项新的非AI许可证，旨在规范AI技术的使用。",
-        "en": "MIT releases a new non-AI license aimed at regulating the use of AI technology."
+        "zh": "讨论MIT针对非AI使用的许可证及其影响。",
+        "en": "Discussion on MIT's license for non-AI use and its implications."
       },
-      "hoursAgo": 2,
+      "hoursAgo": 10,
       "id": 1
     },
     {
@@ -22,15 +22,31 @@
       "srcUrl": "news.ycombinator.com",
       "link": "https://news.ycombinator.com/item?id=45824262",
       "title": {
-        "zh": "超越ChatGPT：有意识AI的悄然诞生",
+        "zh": "超越ChatGPT：意识AI的悄然诞生",
         "en": "Beyond ChatGPT: The Silent Birth of Conscious AI"
       },
       "desc": {
-        "zh": "探讨人工智能意识的可能性及其对未来的潜在影响。",
-        "en": "Explores the possibility of AI consciousness and its potential impact on the future."
+        "zh": "探索超越当前模型的意识AI概念及其潜在发展。",
+        "en": "Exploring the concept of conscious AI beyond current models and its potential development."
       },
-      "hoursAgo": 5,
+      "hoursAgo": 15,
       "id": 2
+    },
+    {
+      "category": "research",
+      "source": "Hacker News",
+      "srcUrl": "news.ycombinator.com",
+      "link": "https://news.ycombinator.com/item?id=45154950",
+      "title": {
+        "zh": "为什么技术奇点可能'无关紧要'",
+        "en": "Why the Technological Singularity May Be a 'Big Nothing'"
+      },
+      "desc": {
+        "zh": "分析技术奇点可能被高估的论点。",
+        "en": "Arguments analyzing why the technological singularity might be overestimated."
+      },
+      "hoursAgo": 20,
+      "id": 3
     },
     {
       "category": "research",
@@ -38,31 +54,31 @@
       "srcUrl": "news.ycombinator.com",
       "link": "https://news.ycombinator.com/item?id=44739505",
       "title": {
-        "zh": "“人工智能用于人工智能研究与开发”",
-        "en": "“Intelligenza Artificiale for Artificial Intelligence Research and Development”"
+        "zh": "人工智能用于人工智能研究与开发",
+        "en": "Intelligenza Artificiale for Artificial Intelligence Research and Development"
       },
       "desc": {
-        "zh": "一个关于利用AI促进AI研究与发展的倡议或项目。",
-        "en": "An initiative or project on using AI to advance AI research and development."
+        "zh": "一篇关于AI在研发中应用的帖子，可能涉及多语言背景。",
+        "en": "A post on AI applications in R&D, possibly involving multilingual contexts."
       },
-      "hoursAgo": 10,
-      "id": 3
+      "hoursAgo": 5,
+      "id": 4
     },
     {
-      "category": "industry",
-      "source": "AI/ML Weekly Digest",
+      "category": "open",
+      "source": "Beehiiv",
       "srcUrl": "hn-ai-newsletter.beehiiv.com",
       "link": "https://hn-ai-newsletter.beehiiv.com/p/last-weeks-ai-highlights-hn-20",
       "title": {
-        "zh": "Show HN: AI/ML 每周摘要 – 由LLM策划、总结和情感分析",
+        "zh": "展示HN：AI/ML每周摘要 – 由LLM策划、总结和情感分析",
         "en": "Show HN: AI/ML Weekly Digest – Curated by LLM, Summarized and Sentiment-Analyzed"
       },
       "desc": {
-        "zh": "一个由大型语言模型策划的AI/ML每周新闻摘要，包括总结和情感分析。",
-        "en": "A weekly AI/ML news digest curated by a large language model, including summaries and sentiment analysis."
+        "zh": "一份由LLM自动策划和总结的AI/ML新闻每周摘要。",
+        "en": "A weekly digest of AI/ML news automatically curated and summarized by an LLM."
       },
-      "hoursAgo": 15,
-      "id": 4
+      "hoursAgo": 2,
+      "id": 5
     }
   ],
   "trending": [
@@ -70,8 +86,8 @@
       "rank": "01",
       "color": "#A855F7",
       "text": {
-        "zh": "AI伦理与安全",
-        "en": "AI Ethics and Safety"
+        "zh": "大型语言模型进展",
+        "en": "LLM Advancements"
       },
       "count": "1.2k"
     },
@@ -79,8 +95,8 @@
       "rank": "02",
       "color": "#06B6D4",
       "text": {
-        "zh": "开源AI模型",
-        "en": "Open Source AI Models"
+        "zh": "AI安全关注",
+        "en": "AI Safety Concerns"
       },
       "count": "874"
     },
@@ -88,8 +104,8 @@
       "rank": "03",
       "color": "#EC4899",
       "text": {
-        "zh": "大型语言模型",
-        "en": "Large Language Models"
+        "zh": "开源AI工具",
+        "en": "Open Source AI Tools"
       },
       "count": "621"
     },
@@ -97,7 +113,7 @@
       "rank": "04",
       "color": "#EAB308",
       "text": {
-        "zh": "AI工业应用",
+        "zh": "AI行业应用",
         "en": "AI in Industry Applications"
       },
       "count": "509"
@@ -106,8 +122,8 @@
       "rank": "05",
       "color": "#22C55E",
       "text": {
-        "zh": "AI研究突破",
-        "en": "AI Research Breakthroughs"
+        "zh": "多模态AI模型",
+        "en": "Multimodal AI Models"
       },
       "count": "388"
     }
@@ -154,5 +170,5 @@
       "color": "#A855F7"
     }
   ],
-  "updatedAt": "2026-05-06T05:54:53.852Z"
+  "updatedAt": "2026-05-09T20:42:46.969Z"
 }
